@@ -1,0 +1,282 @@
+[
+  {
+    "batch": 1,
+    "ids": [
+      "H001",
+      "H002",
+      "H003",
+      "H004",
+      "H005",
+      "H006",
+      "H007",
+      "H008",
+      "H009",
+      "H010"
+    ],
+    "names": [
+      "孔子",
+      "孟子",
+      "荀子",
+      "老子",
+      "庄子",
+      "墨子",
+      "韩非",
+      "商鞅",
+      "管仲",
+      "晏婴"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 孔子, 春秋; 55岁，端正长方脸，长须，深色先秦儒者冠服，执竹简，温厚庄重\nCell 2 (row 1, column 2): 孟子, 战国; 45岁，宽阔眉骨，方须，先秦士人冠服，讲说时抬起一手，坚定\nCell 3 (row 1, column 3): 荀子, 战国; 60岁，瘦长脸，灰色整齐长须，深褐儒服，手持卷册，严谨\nCell 4 (row 1, column 4): 老子, 春秋战国时期，生平与成书有争议; 75岁，长白眉白须，朴素灰白古袍，手执竹杖，清静\nCell 5 (row 1, column 5): 庄子, 战国; 40岁，清瘦面容，松散发髻，朴素布衣，手持一片竹叶，洒脱\nCell 6 (row 2, column 1): 墨子, 战国; 45岁，方脸短须，粗布短褐与工具袋，手持木制工尺，务实\nCell 7 (row 2, column 2): 韩非, 战国; 40岁，窄长脸修剪短须，深色战国贵族长衣，执简，冷静锐利\nCell 8 (row 2, column 3): 商鞅, 战国; 42岁，棱角分明，黑色冠服，双手持法令竹简，果断\nCell 9 (row 2, column 4): 管仲, 春秋; 50岁，圆阔脸须髯，春秋卿大夫冠服，手执策简，精干\nCell 10 (row 2, column 5): 晏婴, 春秋; 55岁，体格清瘦小巧，短须，春秋礼服，双手作揖，睿智谦和"
+  },
+  {
+    "batch": 2,
+    "ids": [
+      "H011",
+      "H012",
+      "H013",
+      "H014",
+      "H015",
+      "H016",
+      "H017",
+      "H018",
+      "H019",
+      "H020"
+    ],
+    "names": [
+      "屈原",
+      "孙武",
+      "孙膑",
+      "苏秦",
+      "吕不韦",
+      "李斯",
+      "卓文君",
+      "张良",
+      "萧何",
+      "韩信"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 屈原, 战国; 40岁，高冠博带，清癯脸，长剑佩侧，手持兰草，忧思\nCell 2 (row 1, column 2): 孙武, 春秋，生平细节有争议; 45岁，短须，春秋军谋者革甲与布袍，握竹简兵书，沉着\nCell 3 (row 1, column 3): 孙膑, 战国; 40岁，清瘦短须，战国谋士衣冠，坐姿上半身，掌中木筹，思索\nCell 4 (row 1, column 4): 苏秦, 战国; 38岁，细眉短须，战国游士华服，手持数卷盟书，善辩\nCell 5 (row 1, column 5): 吕不韦, 战国; 50岁，饱满圆脸浓须，战国贵族冠与宽袖锦袍，执书卷，沉稳\nCell 6 (row 2, column 1): 李斯, 秦; 45岁，长面黑须，秦黑色高冠官袍，手持毛笔与简牍，克制\nCell 7 (row 2, column 2): 卓文君, 西汉; 25岁女性，汉代高髻，雅致淡朱襦裙，古琴一角在胸前下方，坚定自若\nCell 8 (row 2, column 3): 张良, 秦汉之际; 40岁，清秀无浓须，秦汉文士冠服，执卷沉思，儒雅\nCell 9 (row 2, column 4): 萧何, 秦汉之际; 50岁，宽脸整齐须，汉代文官冠袍，双手持账籍简册，稳健\nCell 10 (row 2, column 5): 韩信, 秦汉之际; 30岁，年轻锋利面庞，汉代军将束发革甲，手扶剑柄，自信"
+  },
+  {
+    "batch": 3,
+    "ids": [
+      "H021",
+      "H022",
+      "H023",
+      "H024",
+      "H025",
+      "H026",
+      "H027",
+      "H028",
+      "H029",
+      "H030"
+    ],
+    "names": [
+      "陈平",
+      "贾谊",
+      "司马迁",
+      "张骞",
+      "苏武",
+      "班超",
+      "班固",
+      "班昭",
+      "蔡文姬",
+      "张衡"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 陈平, 秦汉之际; 38岁，俊朗面庞短须，汉代深衣，手持一枚木筹，机敏\nCell 2 (row 1, column 2): 贾谊, 西汉; 28岁，年轻清秀少须，汉代文士冠，手中竹简，忧国而敏锐\nCell 3 (row 1, column 3): 司马迁, 西汉; 48岁，深邃眼神，汉代史官冠服，手持笔与简册，坚韧\nCell 4 (row 1, column 4): 张骞, 西汉; 38岁，风霜脸浓短须，汉使布袍和披风，手握使节，远行者\nCell 5 (row 1, column 5): 苏武, 西汉; 60岁，风霜瘦脸长白须，汉代使者袍，持旄节，坚毅\nCell 6 (row 2, column 1): 班超, 东汉; 45岁，浓眉浓须，东汉军装披风，持使节，勇敢\nCell 7 (row 2, column 2): 班固, 东汉; 40岁，宽额短须，东汉学者深衣，手持书简，严谨\nCell 8 (row 2, column 3): 班昭, 东汉; 45岁女性，端庄高髻，东汉朴雅长袖深衣，执笔编书，沉静\nCell 9 (row 2, column 4): 蔡文姬, 汉末; 32岁女性，汉末妇人发髻，朴雅襦裙披帛，抱胡笳，忧思\nCell 10 (row 2, column 5): 张衡, 东汉; 40岁，清瘦短须，东汉学者冠袍，身旁简洁铜制天文环形器局部，求索"
+  },
+  {
+    "batch": 4,
+    "ids": [
+      "H031",
+      "H032",
+      "H033",
+      "H034",
+      "H035",
+      "H036",
+      "H037",
+      "H038",
+      "H039",
+      "H040"
+    ],
+    "names": [
+      "蔡伦",
+      "华佗",
+      "张仲景",
+      "诸葛亮",
+      "曹操",
+      "刘备",
+      "孙权",
+      "周瑜",
+      "鲁肃",
+      "赵云"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 蔡伦, 东汉; 45岁，圆脸短须，东汉官服，手持一张淡色纸页，专注\nCell 2 (row 1, column 2): 华佗, 汉末; 60岁，白须高髻，汉末医者布袍，手持药草，仁厚\nCell 3 (row 1, column 3): 张仲景, 汉末; 52岁，浓眉长须，汉末朴素长袍，持诊籍竹简与药草，审慎\nCell 4 (row 1, column 4): 诸葛亮, 三国; 42岁，清瘦长脸短须，纶巾鹤氅，手持羽扇，沉着\nCell 5 (row 1, column 5): 曹操, 汉末三国; 48岁，宽额小眼浓须，汉末深色冠袍与朱色内领，握卷，雄略\nCell 6 (row 2, column 1): 刘备, 汉末三国; 48岁，宽耳长脸疏须，汉末冠服，双手拢袖，温厚\nCell 7 (row 2, column 2): 孙权, 三国; 35岁，方脸浓眉短髯，江东军政袍服，按剑，稳健\nCell 8 (row 2, column 3): 周瑜, 汉末; 32岁，俊秀年轻无长须，汉末将领铠甲与披风，手持指挥简策，英气\nCell 9 (row 2, column 4): 鲁肃, 汉末; 42岁，宽圆脸短髯，汉末文士衣冠，手持卷册，友善稳重\nCell 10 (row 2, column 5): 赵云, 汉末三国; 32岁，英挺年轻面庞，汉末银灰铁甲，头盔，长枪一角，刚毅"
+  },
+  {
+    "batch": 5,
+    "ids": [
+      "H041",
+      "H042",
+      "H043",
+      "H044",
+      "H045",
+      "H046",
+      "H047",
+      "H048",
+      "H049",
+      "H050"
+    ],
+    "names": [
+      "嵇康",
+      "阮籍",
+      "王羲之",
+      "谢安",
+      "陶渊明",
+      "谢道韫",
+      "顾恺之",
+      "郦道元",
+      "祖冲之",
+      "贾思勰"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 嵇康, 魏晋; 35岁，俊朗清瘦，披发宽袍，手指轻抚古琴，独立\nCell 2 (row 1, column 2): 阮籍, 魏晋; 40岁，细长眼微须，魏晋宽袍松发髻，手执酒杯，疏离\nCell 3 (row 1, column 3): 王羲之, 东晋; 45岁，短须，东晋宽袖文士衣巾，执毛笔，优雅\nCell 4 (row 1, column 4): 谢安, 东晋; 45岁，修长脸短须，东晋士族冠服，手持麈尾，安定从容\nCell 5 (row 1, column 5): 陶渊明, 东晋; 45岁，瘦脸疏须，东晋布衣头巾，执一枝菊花，平和\nCell 6 (row 2, column 1): 谢道韫, 东晋; 28岁女性，东晋妇人简雅高髻，宽袖襦裙，手持诗笺，敏思\nCell 7 (row 2, column 2): 顾恺之, 东晋; 38岁，清瘦眼神灵动，东晋宽袍，握画笔，专注观察\nCell 8 (row 2, column 3): 郦道元, 北魏; 45岁，北魏学者冠袍，短须，手持卷起的地理图，坚毅\nCell 9 (row 2, column 4): 祖冲之, 南北朝; 45岁，南朝士人冠服，长脸短须，持木制算筹，沉静\nCell 10 (row 2, column 5): 贾思勰, 北魏; 45岁，北魏朴素士人衣巾，浓短须，手持谷穗，务实"
+  },
+  {
+    "batch": 6,
+    "ids": [
+      "H051",
+      "H052",
+      "H053",
+      "H054",
+      "H055",
+      "H056",
+      "H057",
+      "H058",
+      "H059",
+      "H060"
+    ],
+    "names": [
+      "李世民",
+      "魏征",
+      "房玄龄",
+      "玄奘",
+      "李白",
+      "杜甫",
+      "王维",
+      "孟浩然",
+      "白居易",
+      "刘禹锡"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 李世民, 唐; 38岁，英武浓眉短髯，唐代朴雅帝王圆领袍和翼善式冠，执卷，开阔\nCell 2 (row 1, column 2): 魏征, 唐; 55岁，瘦脸黑白须，唐代幞头深红圆领官袍，持笏，刚正\nCell 3 (row 1, column 3): 房玄龄, 唐; 50岁，修长脸整齐长须，唐代幞头深色圆领官袍，持文书，温厚\nCell 4 (row 1, column 4): 玄奘, 唐; 35岁，剃发僧人，唐代朴素僧袍袈裟，手持经卷，坚毅\nCell 5 (row 1, column 5): 李白, 唐; 35岁，清俊略微短须，唐代布衣高髻，持酒杯，洒脱仰首\nCell 6 (row 2, column 1): 杜甫, 唐; 55岁，瘦削脸长须，唐代破旧布衣头巾，持书卷，悲悯\nCell 7 (row 2, column 2): 王维, 唐; 40岁，清癯短须，唐代文士袍服，手持一枝竹，宁静\nCell 8 (row 2, column 3): 孟浩然, 唐; 45岁，宽额疏须，唐代简朴衣巾，手持行杖，闲适\nCell 9 (row 2, column 4): 白居易, 唐; 50岁，温和圆脸长须，唐代圆领袍幞头，执诗卷，亲和\nCell 10 (row 2, column 5): 刘禹锡, 唐; 45岁，方正面庞短须，唐代文士圆领袍，握书卷，昂扬"
+  },
+  {
+    "batch": 7,
+    "ids": [
+      "H061",
+      "H062",
+      "H063",
+      "H064",
+      "H065",
+      "H066",
+      "H067",
+      "H068",
+      "H069",
+      "H070"
+    ],
+    "names": [
+      "柳宗元",
+      "韩愈",
+      "李贺",
+      "杜牧",
+      "鱼玄机",
+      "薛涛",
+      "上官婉儿",
+      "武则天",
+      "孙思邈",
+      "颜真卿"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 柳宗元, 唐; 38岁，瘦长脸短须，唐代深色长袍与幞头，持册，深思\nCell 2 (row 1, column 2): 韩愈, 唐; 45岁，宽阔脸浓短须，唐代文官圆领袍，抬手论说，坚定\nCell 3 (row 1, column 3): 李贺, 唐; 25岁，年轻苍白瘦脸无浓须，唐代黑色窄袖衣，执诗笺，奇想\nCell 4 (row 1, column 4): 杜牧, 唐; 35岁，俊朗短须，唐代文士圆领袍，执折起的纸卷，敏锐\nCell 5 (row 1, column 5): 鱼玄机, 唐; 24岁女性，唐代女性发髻，素雅道袍式襦裙，执诗笺，清醒独立\nCell 6 (row 2, column 1): 薛涛, 唐; 35岁女性，唐代高髻淡朱襦裙，手持朱色小诗笺，优雅\nCell 7 (row 2, column 2): 上官婉儿, 唐; 35岁女性，唐代宫廷高髻襦裙，手执毛笔与卷册，干练\nCell 8 (row 2, column 3): 武则天, 唐、武周; 55岁女性，唐代华贵高髻简制金饰，朱色庄重宫装，端正坐姿，威仪\nCell 9 (row 2, column 4): 孙思邈, 唐; 70岁，长白须医者，唐代朴素道袍，手持药草，慈和\nCell 10 (row 2, column 5): 颜真卿, 唐; 50岁，方阔脸浓须，唐代深朱官袍幞头，手执粗笔，正直"
+  },
+  {
+    "batch": 8,
+    "ids": [
+      "H071",
+      "H072",
+      "H073",
+      "H074",
+      "H075",
+      "H076",
+      "H077",
+      "H078",
+      "H079",
+      "H080"
+    ],
+    "names": [
+      "范仲淹",
+      "欧阳修",
+      "司马光",
+      "王安石",
+      "苏轼",
+      "苏辙",
+      "沈括",
+      "毕昇",
+      "李清照",
+      "辛弃疾"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 范仲淹, 北宋; 48岁，瘦长脸短须，宋代展脚幞头官袍，手持笏，忧民\nCell 2 (row 1, column 2): 欧阳修, 北宋; 50岁，圆润面庞短须，宋代文士冠服，持书卷，宽和\nCell 3 (row 1, column 3): 司马光, 北宋; 55岁，瘦长脸长须，宋代文士冠服，执册校勘，审慎\nCell 4 (row 1, column 4): 王安石, 北宋; 45岁，浓眉瘦脸胡须，宋代朴素圆领袍头巾，持政论纸卷，坚定\nCell 5 (row 1, column 5): 苏轼, 北宋; 45岁，宽阔面庞胡须，东坡巾白色宽袖袍，抱卷，旷达，与参考人物相似\nCell 6 (row 2, column 1): 苏辙, 北宋; 45岁，长脸整齐短须，宋代朴素文士冠袍，持书卷，沉静\nCell 7 (row 2, column 2): 沈括, 北宋; 45岁，浓眉短须，宋代学者冠服，手持小型指南器，探索\nCell 8 (row 2, column 3): 毕昇, 北宋; 40岁，短须工匠布衣头巾，手持木托上几块活字，专注\nCell 9 (row 2, column 4): 李清照, 宋; 35岁女性，宋代简洁高髻，素色褙子襦裙，执词笺，敏锐清雅\nCell 10 (row 2, column 5): 辛弃疾, 南宋; 40岁，浓眉短髯，宋代文士袍搭朴雅披风，手扶剑，豪迈"
+  },
+  {
+    "batch": 9,
+    "ids": [
+      "H081",
+      "H082",
+      "H083",
+      "H084",
+      "H085",
+      "H086",
+      "H087",
+      "H088",
+      "H089",
+      "H090"
+    ],
+    "names": [
+      "陆游",
+      "朱熹",
+      "文天祥",
+      "黄道婆",
+      "关汉卿",
+      "管道昇",
+      "王守仁",
+      "于谦",
+      "郑和",
+      "李时珍"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 陆游, 南宋; 55岁，瘦脸长须，宋代布衣头巾，手持诗卷，坚韧\nCell 2 (row 1, column 2): 朱熹, 南宋; 55岁，长白黑须，宋代儒者大袖衣冠，执书，深思\nCell 3 (row 1, column 3): 文天祥, 南宋; 40岁，长脸黑须，宋代官袍幞头，执笏，坚定\nCell 4 (row 1, column 4): 黄道婆, 宋元之际; 55岁女性，宋元平民妇人包头布，朴素短袄，手持棉花与纺线，务实\nCell 5 (row 1, column 5): 关汉卿, 元; 45岁，圆阔脸短须，元代文士衣巾，持戏曲稿，生动\nCell 6 (row 2, column 1): 管道昇, 元; 40岁女性，元代文人女性简髻襦裙，握画笔与竹画卷，优雅\nCell 7 (row 2, column 2): 王守仁, 明; 45岁，清瘦短须，明代儒者方巾宽袖袍，持卷，坚定温和\nCell 8 (row 2, column 3): 于谦, 明; 45岁，棱角脸短须，明代乌纱帽圆领官袍，持笏，刚正\nCell 9 (row 2, column 4): 郑和, 明; 42岁，面容刚毅无胡须，明代使者官帽袍服，手持海图卷，开阔\nCell 10 (row 2, column 5): 李时珍, 明; 55岁，长须医者，明代儒巾布袍，手持药草与本草册，耐心"
+  },
+  {
+    "batch": 10,
+    "ids": [
+      "H091",
+      "H092",
+      "H093",
+      "H094",
+      "H095",
+      "H096",
+      "H097",
+      "H098",
+      "H099",
+      "H100"
+    ],
+    "names": [
+      "徐霞客",
+      "徐光启",
+      "宋应星",
+      "唐寅",
+      "文徵明",
+      "顾炎武",
+      "王贞仪",
+      "沈寿",
+      "曹雪芹",
+      "秋瑾"
+    ],
+    "prompt": "Use case: historical-scene. Create a professionally illustrated contact sheet of TEN DISTINCT Chinese historical character bust portraits. The attached reference is STYLE ONLY: warm ivory xuan paper, handmade sumi / Chinese ink wash, expressive dark ink outlines, soft beige ink, restrained cinnabar red accents. Match its hand-painted detail and sophisticated historical portrait feeling, NOT photorealistic, NOT cartoon, NOT a UI screenshot. Do not depict the reference's Su Shi unless specifically in the requested group.\nEXACT GEOMETRY: 2560 x 1536 canvas. Exactly FIVE equal columns and TWO equal rows, zero outer margins, zero inter-cell gaps. Thus each cell is precisely 512 x 768. One centered distinct adult bust in every cell, no overlapping neighboring cells. Background in every cell is the SAME warm ivory #f7f1e6 paper. No visible panel frames, no borders, no grid lines, NO TEXT, NO LETTERS, NO NUMBERS, NO NAMES, NO WATERMARKS. Independent ink vignette bust in each cell with soft fading paper edges. Entire head including headgear fits well inside the cell, head begins around y=100 within the cell, eyes around y=260, shoulders around y=420, hands / small iconic tool around y=560. Keep the bottom 100 pixels quiet and mostly paper. Use 3/4 and frontal poses with variation but consistent scale. Avoid huge landscape backgrounds; a faint small landscape / red sun behind selected heads is allowed. Faces, ages, genders and silhouettes must be recognizably varied, never ten copies of the same beard. Era appropriate clothing and headgear, no mixing Tang and Qing. No extra background people, no child figures, no modern glasses. Props simple and anatomically coherent.\nFill the cells in EXACT reading order below; row 1 cells 1-5, row 2 cells 6-10. Chinese names identify the people for the artist only; DO NOT RENDER THESE NAMES.\nCell 1 (row 1, column 1): 徐霞客, 明; 38岁，短须，明代旅行者布袍绑腿上半身，背竹篓手执行杖，向往\nCell 2 (row 1, column 2): 徐光启, 明; 50岁，长脸整齐须，明代儒巾袍服，手持几何图纸，求理\nCell 3 (row 1, column 3): 宋应星, 明; 45岁，短须，明代学者布衣方巾，手持木工器具，观察\nCell 4 (row 1, column 4): 唐寅, 明; 35岁，俊朗短须，明代文士方巾长袍，执画笔，风流自信\nCell 5 (row 1, column 5): 文徵明, 明; 60岁，瘦脸白须，明代文士方巾长袍，手持细笔，沉静\nCell 6 (row 2, column 1): 顾炎武, 明清之际; 45岁，浓眉短须，明清之际儒巾布袍，无剃发辫，手执书卷，踏实\nCell 7 (row 2, column 2): 王贞仪, 清; 25岁女性，清代汉族女性简髻襦裙，无旗装，手持星图，明澈\nCell 8 (row 2, column 3): 沈寿, 清末民初; 38岁女性，清末汉族女装高领褂与简髻，手持刺绣绷框，专注\nCell 9 (row 2, column 4): 曹雪芹, 清; 40岁，略瘦面庞短须，清代朴素长衫，素色布帽，执书稿，深邃\nCell 10 (row 2, column 5): 秋瑾, 清末; 30岁女性，清末简雅侠女装束，束发，手持剑与文稿，英气"
+  }
+]

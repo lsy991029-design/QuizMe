@@ -1,0 +1,71 @@
+{
+  "tool": "mcp__gpt_image__edit_image",
+  "styleReference": "design-concepts/portrait-style-reference.png",
+  "output": "public/art/portraits/{id}.webp",
+  "size": [
+    1024,
+    768
+  ],
+  "portraits": [
+    {
+      "id": "H079",
+      "name": "李清照",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295477191_Use-case-historical-scene-Cr.png",
+      "prompt": "Chinese ink watercolor half-length portrait of Li Qingzhao, female Song poet in pale blue hanfu holding poetry manuscript, style reference only, ivory paper and faint bamboo mountains, no text or UI"
+    },
+    {
+      "id": "H080",
+      "name": "辛弃疾",
+      "prompt": "Use case: historical-scene. Create a new 4:3 Chinese ink watercolor half-length portrait of 辛弃疾 Xin Qiji, Southern Song male warrior-poet around 45, strong eyebrows, trimmed beard and resolute thoughtful expression, dark blue Song era robe, simple scholar headcloth, one hand resting on a sheathed sword, a closed poetry manuscript on low table. Reference is STYLE ONLY: change subject, face, costume and props, no guqin. Refined Chinese watercolor and fine ink facial details, muted slate blue and ochre, very faint bamboo and distant mountains on warm ivory paper. Centered single man, head entirely visible, soft faded margins, no visible text or calligraphy, no UI, no frame, no watermark, coherent natural hands. Same restrained quality as reference.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295537700_Use-case-historical-scene-Cr.png"
+    },
+    {
+      "id": "H081",
+      "name": "陆游",
+      "prompt": "Use case: historical-scene. New half-length portrait of 陆游 Lu You, Southern Song elderly male poet with lined thoughtful face, long gray beard, simple dark scholar cap, pale gray Song dynasty robe. Sitting at a writing desk, right hand holds brush above a blank poetry scroll, left rests on scroll. Reference is STYLE ONLY: use a different elderly face and writing pose, do not reproduce guqin. Chinese watercolor and fine ink wash, muted blue gray ochre, very pale bamboo and distant mountains, warm ivory paper background with soft faded edges. 4:3 centered person, full head and headroom, elegantly rendered hands. No visible letters, no text, no UI, no logos or watermark.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295594541_Use-case-historical-scene-Ne.png"
+    },
+    {
+      "id": "H082",
+      "name": "朱熹",
+      "prompt": "Use case: historical-scene. New 4:3 half-length portrait of 朱熹 Zhu Xi, elderly Southern Song Confucian philosopher, square serious face, long gray beard, dark tall folded Confucian scholar cap and pale blue gray robes. Upright seated scholar holding an open old classical book in both hands, not an instrument. Use reference solely for fine watercolor ink style, replace face and pose entirely. Subtle bamboo and pale mountain scene, warm ivory paper background, restrained muted slate blue ochre, softly faded brush edges, centered full head with headroom, anatomically coherent hands. No readable text, letters, calligraphy, UI, frame, logo, watermark.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295728358_Use-case-historical-scene-Ne.png"
+    },
+    {
+      "id": "H083",
+      "name": "文天祥",
+      "prompt": "Use case: historical-scene. Create a new Chinese watercolor ink half-length portrait of 文天祥 Wen Tianxiang, Southern Song male official aged around 45, upright resolute scholarly bearing, dignified angular face, short mustache and neat black beard. Song era black official futou cap with modest lateral wings and dark muted red brown ceremonial robe, holding a closed manuscript scroll in hands. Reference is style only: different person, no guqin. Refined fine ink face, pale bamboo and mist mountains, ivory paper, low saturation slate ochre, gently faded edges, 4:3 centered full head with ample headroom for cap, no writing, no text, no UI, no logos, no watermark, coherent natural fingers.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295857569_Use-case-historical-scene-Cr.png"
+    },
+    {
+      "id": "H084",
+      "name": "黄道婆",
+      "prompt": "Use case: historical-scene. New 4:3 half-length watercolor ink portrait of 黄道婆 Huang Daopo, elderly Chinese female textile innovator from Song-Yuan transition. Warm deeply lined face, gray hair neatly pinned under plain cloth headwrap, simple blue gray working hanfu, humble and capable expression. Hands gently hold a small wooden cotton spindle with white cotton thread, some cotton bolls and woven cloth on low desk. Reference is STYLE only: entirely replace male scholar and instrument with this elderly craftswoman. Refined painterly face and hands, muted slate blue and ochre, faint bamboo and misty hills on warm ivory paper, centered full head and generous headroom, softly faded margins. No writing, no letters, no UI, no watermark, no extra limbs.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295968320_Use-case-historical-scene-Ne.png"
+    },
+    {
+      "id": "H085",
+      "name": "关汉卿",
+      "prompt": "Use case: historical-scene. New half-length portrait of 关汉卿 Guan Hanqing, Yuan dynasty Chinese male playwright about 55, lively intelligent weathered face, thin mustache and short beard, plain dark rounded scholar cap, muted brown-gray Yuan era robe. Sitting at low desk, one hand holding an unmarked thin play manuscript and other with brush. Reference is STYLE ONLY: different face and pose, no instrument. Chinese refined watercolor ink illustration, blue gray and muted ochre, pale bamboo and mist hills over ivory paper, 4:3 centered full head, soft faded margins, natural hands. No visible text, writing, calligraphy, UI, logo or watermark.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296192494_Use-case-historical-scene-Ne.png"
+    },
+    {
+      "id": "H086",
+      "name": "管道昇",
+      "prompt": "Use case: historical-scene. New 4:3 half-length portrait of 管道昇 Guan Daosheng, Yuan dynasty Chinese female painter and calligrapher around 45, elegant mature thoughtful face, modest pinned up hair with simple jade pin, pale blue gray flowing hanfu. Painting bamboo on paper at a low desk, right hand holds a Chinese brush correctly, left rests beside a small monochrome bamboo painting. STYLE ONLY reference, replace male and guqin entirely. Restrained fine Chinese ink watercolor illustration, muted slate blue ochre, faint bamboo and mountains on warm ivory paper, softly fading outer margins, centered full head with headroom, coherent natural hands. No writing, readable text, UI, frame, logo or watermark.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296440837_Use-case-historical-scene-Ne.png"
+    },
+    {
+      "id": "H087",
+      "name": "王守仁",
+      "prompt": "Use case: historical-scene. New 4:3 half-length portrait of 王守仁 Wang Shouren also Wang Yangming, Ming dynasty Chinese male philosopher and official about 50, thin angular thoughtful face, narrow mustache and long fine beard. Plain black Ming scholar cap, modest gray blue Ming scholar robe with crossed white collar. Sitting upright with a closed classical book in one hand and other resting on desk, calm focused eyes. Reference is style only, different face and body, no guqin. Refined ink watercolor and fine facial details, subtle faded bamboo and misty hills, ivory paper, muted blue gray ochre, centered full head, soft faded outer margins, natural hands. No writing, calligraphy, text, UI, logo or watermark.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296780695_Use-case-historical-scene-Ne.png"
+    },
+    {
+      "id": "H088",
+      "name": "于谦",
+      "prompt": "Use case: historical-scene. New 4:3 half-length ink watercolor portrait of 于谦 Yu Qian, Ming dynasty Chinese male statesman around 50, dignified upright resolute gaze, long narrow face, modest mustache and trimmed beard. Black Ming official futou cap with lateral wings and muted dark crimson official robe, holding rolled government papers with both hands. Reference is ONLY stylistic: replace face costume and pose; no instrument. Fine ink facial rendering, warm ivory paper, muted blue gray ochre red, very faint bamboo and mountains behind, soft faded margins, single centered official full head visible with headroom and hat entirely in image. Natural hands, no writing, letters, UI, watermark or logos.",
+      "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792297018372_Use-case-historical-scene-Ne.png"
+    }
+  ]
+}

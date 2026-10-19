@@ -1,0 +1,691 @@
+{
+  "version": "0.3.0-draft",
+  "date": "2026-10-18",
+  "peopleCount": 100,
+  "questionCount": 24,
+  "reachabilityPassed": 100,
+  "duplicateProfiles": 0,
+  "invalidInputCasesPassed": 8,
+  "balancedOptionPositions": true,
+  "identicalLetterResults": {
+    "A": {
+      "vector": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "resultId": "H046"
+    },
+    "B": {
+      "vector": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "resultId": "H046"
+    },
+    "C": {
+      "vector": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "resultId": "H046"
+    },
+    "D": {
+      "vector": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "resultId": "H046"
+    }
+  },
+  "singleAnswerMutationCasesPassed": 24,
+  "tieExample": {
+    "answers": [
+      "B",
+      "B",
+      "B",
+      "C",
+      "D",
+      "A",
+      "B",
+      "C",
+      "C",
+      "C",
+      "C",
+      "D",
+      "A",
+      "C",
+      "A",
+      "B",
+      "B",
+      "A",
+      "A",
+      "A",
+      "A",
+      "C",
+      "C",
+      "B"
+    ],
+    "vector": [
+      5,
+      1,
+      6,
+      3,
+      10,
+      8
+    ],
+    "tiedIds": [
+      "H004",
+      "H042"
+    ],
+    "selectedId": "H004"
+  },
+  "simulation": {
+    "method": "每题独立均匀选择 A—D，固定随机种子 20261018；合成样本，不是真实用户",
+    "samples": 20000,
+    "observedResults": 97,
+    "ties": 1581,
+    "distribution": [
+      {
+        "id": "H001",
+        "name": "孔子",
+        "count": 53
+      },
+      {
+        "id": "H002",
+        "name": "孟子",
+        "count": 62
+      },
+      {
+        "id": "H003",
+        "name": "荀子",
+        "count": 363
+      },
+      {
+        "id": "H004",
+        "name": "老子",
+        "count": 91
+      },
+      {
+        "id": "H005",
+        "name": "庄子",
+        "count": 27
+      },
+      {
+        "id": "H006",
+        "name": "墨子",
+        "count": 276
+      },
+      {
+        "id": "H007",
+        "name": "韩非",
+        "count": 7
+      },
+      {
+        "id": "H008",
+        "name": "商鞅",
+        "count": 9
+      },
+      {
+        "id": "H009",
+        "name": "管仲",
+        "count": 21
+      },
+      {
+        "id": "H010",
+        "name": "晏婴",
+        "count": 1330
+      },
+      {
+        "id": "H011",
+        "name": "屈原",
+        "count": 139
+      },
+      {
+        "id": "H012",
+        "name": "孙武",
+        "count": 13
+      },
+      {
+        "id": "H013",
+        "name": "孙膑",
+        "count": 482
+      },
+      {
+        "id": "H014",
+        "name": "苏秦",
+        "count": 5
+      },
+      {
+        "id": "H015",
+        "name": "吕不韦",
+        "count": 25
+      },
+      {
+        "id": "H016",
+        "name": "李斯",
+        "count": 104
+      },
+      {
+        "id": "H017",
+        "name": "卓文君",
+        "count": 747
+      },
+      {
+        "id": "H018",
+        "name": "张良",
+        "count": 83
+      },
+      {
+        "id": "H019",
+        "name": "萧何",
+        "count": 28
+      },
+      {
+        "id": "H020",
+        "name": "韩信",
+        "count": 370
+      },
+      {
+        "id": "H021",
+        "name": "陈平",
+        "count": 455
+      },
+      {
+        "id": "H022",
+        "name": "贾谊",
+        "count": 27
+      },
+      {
+        "id": "H023",
+        "name": "司马迁",
+        "count": 61
+      },
+      {
+        "id": "H024",
+        "name": "张骞",
+        "count": 31
+      },
+      {
+        "id": "H025",
+        "name": "苏武",
+        "count": 232
+      },
+      {
+        "id": "H026",
+        "name": "班超",
+        "count": 2
+      },
+      {
+        "id": "H027",
+        "name": "班固",
+        "count": 17
+      },
+      {
+        "id": "H028",
+        "name": "班昭",
+        "count": 127
+      },
+      {
+        "id": "H029",
+        "name": "蔡文姬",
+        "count": 1206
+      },
+      {
+        "id": "H030",
+        "name": "张衡",
+        "count": 7
+      },
+      {
+        "id": "H031",
+        "name": "蔡伦",
+        "count": 315
+      },
+      {
+        "id": "H032",
+        "name": "华佗",
+        "count": 380
+      },
+      {
+        "id": "H033",
+        "name": "张仲景",
+        "count": 64
+      },
+      {
+        "id": "H034",
+        "name": "诸葛亮",
+        "count": 11
+      },
+      {
+        "id": "H035",
+        "name": "曹操",
+        "count": 2
+      },
+      {
+        "id": "H036",
+        "name": "刘备",
+        "count": 186
+      },
+      {
+        "id": "H037",
+        "name": "孙权",
+        "count": 110
+      },
+      {
+        "id": "H038",
+        "name": "周瑜",
+        "count": 70
+      },
+      {
+        "id": "H039",
+        "name": "鲁肃",
+        "count": 25
+      },
+      {
+        "id": "H040",
+        "name": "赵云",
+        "count": 1080
+      },
+      {
+        "id": "H041",
+        "name": "嵇康",
+        "count": 83
+      },
+      {
+        "id": "H042",
+        "name": "阮籍",
+        "count": 61
+      },
+      {
+        "id": "H043",
+        "name": "王羲之",
+        "count": 477
+      },
+      {
+        "id": "H044",
+        "name": "谢安",
+        "count": 109
+      },
+      {
+        "id": "H045",
+        "name": "陶渊明",
+        "count": 151
+      },
+      {
+        "id": "H046",
+        "name": "谢道韫",
+        "count": 1849
+      },
+      {
+        "id": "H047",
+        "name": "顾恺之",
+        "count": 44
+      },
+      {
+        "id": "H048",
+        "name": "郦道元",
+        "count": 140
+      },
+      {
+        "id": "H049",
+        "name": "祖冲之",
+        "count": 2
+      },
+      {
+        "id": "H050",
+        "name": "贾思勰",
+        "count": 17
+      },
+      {
+        "id": "H051",
+        "name": "李世民",
+        "count": 1
+      },
+      {
+        "id": "H052",
+        "name": "魏征",
+        "count": 21
+      },
+      {
+        "id": "H053",
+        "name": "房玄龄",
+        "count": 13
+      },
+      {
+        "id": "H054",
+        "name": "玄奘",
+        "count": 30
+      },
+      {
+        "id": "H055",
+        "name": "李白",
+        "count": 1
+      },
+      {
+        "id": "H056",
+        "name": "杜甫",
+        "count": 602
+      },
+      {
+        "id": "H057",
+        "name": "王维",
+        "count": 88
+      },
+      {
+        "id": "H058",
+        "name": "孟浩然",
+        "count": 592
+      },
+      {
+        "id": "H059",
+        "name": "白居易",
+        "count": 416
+      },
+      {
+        "id": "H060",
+        "name": "刘禹锡",
+        "count": 126
+      },
+      {
+        "id": "H061",
+        "name": "柳宗元",
+        "count": 266
+      },
+      {
+        "id": "H062",
+        "name": "韩愈",
+        "count": 58
+      },
+      {
+        "id": "H063",
+        "name": "李贺",
+        "count": 0
+      },
+      {
+        "id": "H064",
+        "name": "杜牧",
+        "count": 180
+      },
+      {
+        "id": "H065",
+        "name": "鱼玄机",
+        "count": 26
+      },
+      {
+        "id": "H066",
+        "name": "薛涛",
+        "count": 610
+      },
+      {
+        "id": "H067",
+        "name": "上官婉儿",
+        "count": 176
+      },
+      {
+        "id": "H068",
+        "name": "武则天",
+        "count": 0
+      },
+      {
+        "id": "H069",
+        "name": "孙思邈",
+        "count": 21
+      },
+      {
+        "id": "H070",
+        "name": "颜真卿",
+        "count": 176
+      },
+      {
+        "id": "H071",
+        "name": "范仲淹",
+        "count": 3
+      },
+      {
+        "id": "H072",
+        "name": "欧阳修",
+        "count": 146
+      },
+      {
+        "id": "H073",
+        "name": "司马光",
+        "count": 5
+      },
+      {
+        "id": "H074",
+        "name": "王安石",
+        "count": 2
+      },
+      {
+        "id": "H075",
+        "name": "苏轼",
+        "count": 143
+      },
+      {
+        "id": "H076",
+        "name": "苏辙",
+        "count": 232
+      },
+      {
+        "id": "H077",
+        "name": "沈括",
+        "count": 267
+      },
+      {
+        "id": "H078",
+        "name": "毕昇",
+        "count": 34
+      },
+      {
+        "id": "H079",
+        "name": "李清照",
+        "count": 233
+      },
+      {
+        "id": "H080",
+        "name": "辛弃疾",
+        "count": 12
+      },
+      {
+        "id": "H081",
+        "name": "陆游",
+        "count": 1707
+      },
+      {
+        "id": "H082",
+        "name": "朱熹",
+        "count": 1
+      },
+      {
+        "id": "H083",
+        "name": "文天祥",
+        "count": 146
+      },
+      {
+        "id": "H084",
+        "name": "黄道婆",
+        "count": 64
+      },
+      {
+        "id": "H085",
+        "name": "关汉卿",
+        "count": 117
+      },
+      {
+        "id": "H086",
+        "name": "管道昇",
+        "count": 821
+      },
+      {
+        "id": "H087",
+        "name": "王守仁",
+        "count": 44
+      },
+      {
+        "id": "H088",
+        "name": "于谦",
+        "count": 317
+      },
+      {
+        "id": "H089",
+        "name": "郑和",
+        "count": 2
+      },
+      {
+        "id": "H090",
+        "name": "李时珍",
+        "count": 3
+      },
+      {
+        "id": "H091",
+        "name": "徐霞客",
+        "count": 5
+      },
+      {
+        "id": "H092",
+        "name": "徐光启",
+        "count": 61
+      },
+      {
+        "id": "H093",
+        "name": "宋应星",
+        "count": 14
+      },
+      {
+        "id": "H094",
+        "name": "唐寅",
+        "count": 36
+      },
+      {
+        "id": "H095",
+        "name": "文徵明",
+        "count": 9
+      },
+      {
+        "id": "H096",
+        "name": "顾炎武",
+        "count": 191
+      },
+      {
+        "id": "H097",
+        "name": "王贞仪",
+        "count": 55
+      },
+      {
+        "id": "H098",
+        "name": "沈寿",
+        "count": 4
+      },
+      {
+        "id": "H099",
+        "name": "曹雪芹",
+        "count": 347
+      },
+      {
+        "id": "H100",
+        "name": "秋瑾",
+        "count": 0
+      }
+    ]
+  },
+  "closestProfilePairs": [
+    {
+      "squaredDistance": 3,
+      "names": [
+        "张仲景",
+        "贾思勰"
+      ]
+    },
+    {
+      "squaredDistance": 3,
+      "names": [
+        "韩非",
+        "司马迁"
+      ]
+    },
+    {
+      "squaredDistance": 4,
+      "names": [
+        "司马迁",
+        "柳宗元"
+      ]
+    },
+    {
+      "squaredDistance": 4,
+      "names": [
+        "孙武",
+        "苏辙"
+      ]
+    },
+    {
+      "squaredDistance": 4,
+      "names": [
+        "宋应星",
+        "沈寿"
+      ]
+    },
+    {
+      "squaredDistance": 4,
+      "names": [
+        "班固",
+        "司马光"
+      ]
+    },
+    {
+      "squaredDistance": 4,
+      "names": [
+        "祖冲之",
+        "李时珍"
+      ]
+    },
+    {
+      "squaredDistance": 4,
+      "names": [
+        "管仲",
+        "范仲淹"
+      ]
+    },
+    {
+      "squaredDistance": 5,
+      "names": [
+        "孙武",
+        "诸葛亮"
+      ]
+    },
+    {
+      "squaredDistance": 5,
+      "names": [
+        "王羲之",
+        "顾恺之"
+      ]
+    }
+  ],
+  "limits": [
+    "可达性仅证明规则中存在对应答案，不证明人物画像真实或测量有效。",
+    "均匀选项使六维分数集中在中部，不能据此要求 100 种结果均匀分配。",
+    "史料引用尚待逐篇核验；题意、维度相关性和结果认同感尚待真人试答。"
+  ],
+  "dataHashes": {
+    "people.json": "1396c5589482864d8df6e8e48ea486dd2e541ec82898758d5e8d28cbc351ce97",
+    "questions.json": "a15ea50c978bea9e43e193a38efb1a51eb70976d24dbc7b1106b730a7a2efa03"
+  },
+  "ruleHashes": {
+    "matcher.py": "8c77e52c3f505042d2205d035dcf5a2233d6295926603057a27dce9ea5776c22",
+    "scoring_rules.md": "606456be4a98bf7d256229bf905b2e62fc970048864f06a4c3d152668cce9c6d"
+  }
+}

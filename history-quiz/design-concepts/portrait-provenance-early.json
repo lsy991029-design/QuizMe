@@ -1,0 +1,162 @@
+[
+  {
+    "id": "H001",
+    "name": "孔子",
+    "prompt": "Use the input image ONLY as an art-style reference. Create a distinct portrait of CONFUCIUS 孔子, elderly Chinese male sage and teacher of Spring and Autumn period, about seventy, broad wise gentle face, long white and grey beard, simple dark scholar headdress, ancient cross-collar muted beige and grey-sage robes, holding a tied bamboo-slip manuscript. Standalone Chinese watercolor and ink light-color half-length portrait, warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre, centered face in upper third, minimal pale bamboo background. Entirely different face, hairstyle, pose and prop from reference; no guqin. Historically plausible. No UI, text, glyphs, writing, seals, labels, logos, frames, modern objects. Landscape 1024x768 composition, one person only.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293300104_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H001.webp",
+    "approved": true
+  },
+  {
+    "id": "H002",
+    "name": "孟子",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Mencius 孟子, mature Chinese male philosopher about sixty, broad upright face, short thick grey beard, tall black Warring States scholar cap, ochre robe, open palm teaching, tied bamboo book under other arm. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293438478_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H002.webp",
+    "approved": true
+  },
+  {
+    "id": "H003",
+    "name": "荀子",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Xunzi 荀子, elderly Chinese male philosopher, stern angular lined face, straight grey beard, neat Warring States black scholar cap, dark sage robes, seated studying bamboo slips on simple wooden surface. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293499319_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H003.webp",
+    "approved": true
+  },
+  {
+    "id": "H004",
+    "name": "老子",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Laozi 老子, very elderly Chinese male Taoist sage, exceptionally long white eyebrows and white beard, receding white hair in high simple topknot, plain flowing pale linen robes, holding a plain wooden walking staff, serene mountains. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293635247_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H004.webp",
+    "approved": true
+  },
+  {
+    "id": "H005",
+    "name": "庄子",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Zhuangzi 庄子, middle aged Chinese male philosopher, lean playful face with short beard, loose simple Warring States brown linen robe, casual topknot, one butterfly near raised hand, relaxed reflective expression. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293684294_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H005.webp",
+    "approved": true
+  },
+  {
+    "id": "H006",
+    "name": "墨子",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Mozi 墨子, middle aged Chinese male thinker and craftsman, sturdy weathered face, cropped short beard, plain dark hemp Warring States robes, simple cloth headwrap, holding wooden measuring square and small plain wooden model. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294049833_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H006.webp",
+    "approved": true
+  },
+  {
+    "id": "H007",
+    "name": "韩非",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Han Feizi 韩非, Chinese male Warring States aristocratic philosopher about forty, fine sharp serious face, trim pointed beard, tall restrained black crown, dark ochre and sage formal robes, holding plain closed bamboo document. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294156004_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H007.webp",
+    "approved": true
+  },
+  {
+    "id": "H008",
+    "name": "商鞅",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Shang Yang 商鞅, Chinese male Qin reformer about fifty, square stern face, short neat dark beard, Warring States Qin minister black cap, structured dark robe, holding tied bamboo legal slips without writing. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294223902_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H008.webp",
+    "approved": true
+  },
+  {
+    "id": "H009",
+    "name": "管仲",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Guan Zhong 管仲, mature Chinese male Spring and Autumn statesman, round composed face, full dark greying beard, period dignified black minister headdress, warm ochre ceremonial robe, holding a plain bronze tally. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294440393_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H009.webp",
+    "approved": true
+  },
+  {
+    "id": "H010",
+    "name": "晏婴",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Yan Ying 晏婴, elderly Chinese male Spring and Autumn diplomat of modest slight stature, lively wise narrow face, wispy grey beard, modest black court cap, simple sage robes, hands folded in diplomatic greeting. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294718017_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H010.webp",
+    "approved": true
+  },
+  {
+    "id": "H011",
+    "name": "屈原",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Qu Yuan 屈原, Chinese male Warring States poet about fifty, elongated noble melancholic face, thin long dark moustache and pointed beard, distinctive tall Chu poet crown, flowing ivory and sage robe, holding small orchid sprig. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295041406_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H011.webp",
+    "approved": true
+  },
+  {
+    "id": "H012",
+    "name": "孙武",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Sun Tzu 孙武, mature Chinese male Spring and Autumn military strategist, broad calm vigilant face, short black beard, simple restrained dark military cap, early Chinese leather lamellar armor beneath linen outer robe, holding rolled plain bamboo military slips. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295117570_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H012.webp",
+    "approved": true
+  },
+  {
+    "id": "H013",
+    "name": "孙膑",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Sun Bin 孙膑, Chinese male Warring States strategist about fifty, thoughtful thin face, trimmed beard, modest soft cloth scholar cap, sage robe, seated upper body portrait with bamboo strategy slips, no weapons. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295198968_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H013.webp",
+    "approved": true
+  },
+  {
+    "id": "H014",
+    "name": "苏秦",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Su Qin 苏秦, Chinese male Warring States diplomat in his forties, alert handsome narrow face, neat black moustache and short beard, tall black court cap, elegant muted ochre ceremonial robes, presenting six small blank jade diplomatic tallies. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295341278_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H014.webp",
+    "approved": true
+  },
+  {
+    "id": "H015",
+    "name": "吕不韦",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Lü Buwei 吕不韦, Chinese male Warring States merchant statesman about fifty, round prosperous intelligent face, full neatly trimmed black grey beard, black Qin court cap and rich yet muted ochre robe, holding plain rolled silk manuscript. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295424839_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H015.webp",
+    "approved": true
+  },
+  {
+    "id": "H016",
+    "name": "李斯",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Li Si 李斯, mature Chinese male Qin chancellor, narrow severe face, straight black beard, Qin minister black tall cap, dark sage black formal crossed-collar robe, holding writing brush above plain blank bamboo slips. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295714108_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H016.webp",
+    "approved": true
+  },
+  {
+    "id": "H017",
+    "name": "卓文君",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Zhuo Wenjun 卓文君, FEMALE young adult Chinese Han dynasty poet and musician, graceful intelligent oval face, feminine eyebrows and soft features, elegant Han high coiffure with simple jade hairpin, ivory crossed-collar ruqun with sage details, lightly touching a guqin, one woman only. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296045032_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H017.webp",
+    "approved": true
+  },
+  {
+    "id": "H018",
+    "name": "张良",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Zhang Liang 张良, Chinese male early Han strategist in his forties, refined slender face, thin moustache and small beard, black simple scholar cap, flowing pale sage ivory robes, holding a plain bamboo scroll at waist, serene discerning gaze. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296345239_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H018.webp",
+    "approved": true
+  },
+  {
+    "id": "H019",
+    "name": "萧何",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Xiao He 萧何, Chinese male early Han administrator about fifty, sturdy round conscientious face, full neatly arranged dark beard, dignified Han official cap, warm ochre robe, holding stacked tied blank bamboo files. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296584345_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H019.webp",
+    "approved": true
+  },
+  {
+    "id": "H020",
+    "name": "韩信",
+    "prompt": "Use the input image ONLY as an art-style reference, NOT as the same person. Create a standalone Chinese watercolor and ink light-color HALF-LENGTH historical portrait of Han Xin 韩信, Chinese male early Han general about thirty-five, lean youthful determined angular face, faint moustache, tied hair beneath practical military headcloth, restrained lamellar armor and sage cloak, holding plain sheathed sword diagonally low. Warm almost-white #fffdfa paper, soft faded edges, muted sage and ochre palette, centered expressive face in upper third, historically plausible period clothing and one simple appropriate prop, minimal pale bamboo or mountain background. Clearly different face, hairstyle and pose from the input; one person only. No UI, text, glyphs, writing, labels, seals, logos, frames, modern clothes or devices. Landscape 1024x768 composition.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792297007206_Use-the-input-image-ONLY-as-an.png",
+    "output": "public/art/portraits/H020.webp",
+    "approved": true
+  }
+]

@@ -1,0 +1,480 @@
+[
+  {
+    "id": "H024",
+    "name": "张骞",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 张骞. male Western Han diplomat explorer age forty, sun-weathered broad face, short dark beard, Han cloth cap with wrapped travel scarf, cream travel robe sage cloak, holding a simple wood diplomatic staff, faint sandy mountains. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295102772_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H024.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H025",
+    "name": "苏武",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 苏武. male Western Han envoy age sixty, weathered resolute face with long white beard, plain dark fur-edged cap, layered pale ochre travel robe, holding an upright wooden diplomatic staff with pale horsetail tassel, faint snowy hills. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295175866_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H025.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H026",
+    "name": "班超",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 班超. male Eastern Han general diplomat age forty-five, sturdy square face and dark mustache full short beard, black Han guan hat, sage travel robe over understated lamellar armor, holding rolled blank map. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295201699_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H026.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H027",
+    "name": "班固",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 班固. male Eastern Han historian age forty-five, measured refined face and neat thin beard, black upright Han scholar guan hat, pale ochre robe sage collar, holding a blank rolled bamboo manuscript. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295316963_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H027.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H028",
+    "name": "班昭",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 班昭. clearly female Eastern Han historian scholar age forty-five, mature intelligent dignified round face, dark hair neatly coiled in Han hairstyle with small jade pin, cream cross collar robe pale sage trim, holding blank bamboo slips. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295348164_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H028.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H029",
+    "name": "蔡文姬",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 蔡文姬. clearly female late Han poet musician age thirty-five, contemplative wistful oval face, Han dark coiled hair with simple hairpin, muted sage and ivory flowing robe, hands over a small traditional guqin at bottom of composition. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295384278_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H029.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H030",
+    "name": "张衡",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 张衡. male Eastern Han astronomer scientist age forty-five, broad forehead inquisitive gaze, tidy dark moustache and beard, black Han official guan cap, sage and cream robe, holding a small bronze armillary sphere without markings. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295441271_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H030.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H031",
+    "name": "蔡伦",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 蔡伦. male Eastern Han papermaking official age forty-five, square thoughtful face, clean shaven, black Han official cap, muted ochre cream robe, holding handmade blank ivory paper sheet above small wooden papermaking sieve. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295477877_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H031.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H032",
+    "name": "华佗",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 华佗. male late Han physician age sixty-five, kindly lean face with long white beard, simple dark cloth scarf, worn ivory robe sage sash, holding a small herb bundle and a blank bamboo manuscript. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295503729_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H032.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H033",
+    "name": "张仲景",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 张仲景. male late Han physician age fifty-five, serious compassionate round face, long gray beard, plain black guan cap, ochre beige robe sage inner collar, holding a small earthen medicine bowl and blank bamboo slips. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295534417_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H033.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H034",
+    "name": "诸葛亮",
+    "prompt": "Male Three Kingdoms strategist, scholar guan hat and feather fan; reference-matched watercolor light-color portrait",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293456543_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H034.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H035",
+    "name": "曹操",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 曹操. male late Han statesman poet age fifty, broad firm cheeks, narrow sharp eyes, short dark beard and moustache, black official guan hat with square crown, muted charcoal robe with ochre collar, rolled blank bamboo manuscript. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293541567_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H035.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H036",
+    "name": "刘备",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 刘备. male late Han leader age fifty, kindly long face and large ears, neat moustache and beard, black upright guan hat, cream robe with muted sage overcoat, hands folded over a blank scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293581095_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H036.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H037",
+    "name": "孙权",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 孙权. male Three Kingdoms ruler age forty, square jaw, expressive dark eyebrows, auburn dark beard, dark official cap, muted ochre outer robe and sage sash, holding ceremonial tablet. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293676812_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H037.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H038",
+    "name": "周瑜",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 周瑜. male late Han general age thirty-three, youthful handsome broad forehead, clean shaven, composed confident gaze, black general headpiece, muted sage robe over subtle light lamellar armor, hand on sheathed sword hilt. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293701591_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H038.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H039",
+    "name": "鲁肃",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 鲁肃. male late Han diplomat age forty, round friendly scholarly face, short full moustache and beard, black simple scholar cap, warm beige robe, holding a blank rolled map. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293740257_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H039.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H040",
+    "name": "赵云",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 赵云. male late Han general age thirty-five, upright athletic build, narrow resolute clean shaven face, hair tied under understated silver and black military headpiece, pale gray lamellar armor and sage cape, spear partly visible at side. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293805138_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H040.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H041",
+    "name": "嵇康",
+    "prompt": "Approved standalone portrait style reference crop reused directly",
+    "source": "/Users/zuoyi/Documents/Explorart/history-quiz/design-concepts/portrait-style-reference.png",
+    "asset": "public/art/portraits/H041.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style",
+    "processing": "Approved reference center-cropped to 4:3 and resized to 1024x768, RGB WebP quality88"
+  },
+  {
+    "id": "H042",
+    "name": "阮籍",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 阮籍. male Wei Jin poet age forty-five, lean angular face with distant introspective gaze, sparse moustache and beard, loose tied hair beneath plain soft dark cap, flowing cream sage robe, holding an earthen wine cup. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293826194_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H042.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H043",
+    "name": "王羲之",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 王羲之. male Eastern Jin calligrapher age forty-five, refined oval face, thin moustache long neat beard, black low scholar hat, pale sage ivory robe, large calligraphy brush held above blank paper with tiny pale goose silhouette far background. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293879784_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H043.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H044",
+    "name": "谢安",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 谢安. male Eastern Jin statesman age fifty-five, calm round dignified face, graying beard, black folded scholar guan hat, elegant cream robe with sage sleeves, holding a plain small fan. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293934233_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H044.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H045",
+    "name": "陶渊明",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 陶渊明. male Eastern Jin poet age fifty, weathered gentle face, untrimmed graying beard, loosely tied hair and simple cloth headscarf, worn cream hemp robe sage sash, holding a small bunch of pale chrysanthemums. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293999844_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H045.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H046",
+    "name": "谢道韫",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 谢道韫. clearly female Eastern Jin poet age thirty-five, intelligent composed gaze, rounded elegant face, neatly high pinned dark hair with simple jade hairpin, flowing cross-collar ivory pale sage robe, holding a blank bamboo scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294024442_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H046.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H047",
+    "name": "顾恺之",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 顾恺之. male Eastern Jin painter age forty, lively thin face and keen eyes, short moustache and beard, soft black scholar cap, ivory robe with ochre sash, holding fine painting brush above blank silk scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294089570_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H047.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H048",
+    "name": "郦道元",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 郦道元. male Northern Wei geographer age fifty, rugged mature face, full short beard, Northern Wei dark cloth cap, pale ochre travel robe sage scarf, holding a rolled blank map and gesturing toward faint river background. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294132053_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H048.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H049",
+    "name": "祖冲之",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 祖冲之. male Southern dynasties mathematician astronomer age forty-five, analytical gaze and broad forehead, thin moustache and beard, black scholar cap, sage and ivory scholar robe, holding small wooden astronomical measuring instrument with no marks. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294157069_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H049.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H050",
+    "name": "贾思勰",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 贾思勰. male Northern Wei agronomist age fifty, sturdy kindly face, short salt-and-pepper beard, dark cloth headscarf, simple muted ochre work robe cream collar, holding wheat ears and a blank bamboo manuscript. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294211979_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H050.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H051",
+    "name": "李世民",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 李世民. male Tang emperor age forty-five, strong square face, confident dark eyebrows, neatly shaped moustache and small beard, Tang black winged court cap, restrained pale ochre imperial robe with no emblems or text, holding ivory ceremonial tablet. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294230879_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H051.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H052",
+    "name": "魏征",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 魏征. male Tang statesman age fifty-five, lean stern face, slightly furrowed eyebrows, long pointed graying beard, Tang black small-winged official cap, sage dark-trim robe, holding closed blank memorial scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294268644_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H052.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H053",
+    "name": "房玄龄",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 房玄龄. male Tang chancellor age fifty-five, measured thoughtful face, soft eyebrows, neat gray moustache and long beard, black Tang court cap, pale ochre ivory robe, holding a simple ivory tablet. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294403641_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H053.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H054",
+    "name": "玄奘",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 玄奘. male Tang Buddhist monk age forty, shaved head fully visible, serene narrow face without facial hair, layered muted ochre and pale beige monk robes, holding a blank wrapped scripture bundle, no halo. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294425888_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H054.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H055",
+    "name": "李白",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 李白. male Tang poet age forty, free spirited open expression, high cheekbones, black moustache and small goatee, hair tied loosely with white cloth headscarf, flowing ivory robe sage sash, holding an earthen wine flask. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294460537_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H055.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H056",
+    "name": "杜甫",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 杜甫. male Tang poet age fifty-five, thin weathered face, worried compassionate brows, sparse gray beard, plain black cloth cap, worn pale ochre cream robe, holding a blank poetry scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294535791_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H056.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H057",
+    "name": "王维",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 王维. male Tang poet painter age forty-five, quiet refined clean long face, neat thin moustache and beard, black scholar cap, pale sage robe and ivory inner collar, holding brush and small blank landscape scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294563228_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H057.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H058",
+    "name": "孟浩然",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 孟浩然. male Tang poet age forty-five, broad relaxed face, slightly windblown moustache beard, loose black hair with plain cloth headband, cream travel robe sage shawl, holding a slender walking staff at side. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294597777_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H058.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H059",
+    "name": "白居易",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 白居易. male Tang poet official age fifty, round approachable face and thoughtful eyes, neatly trimmed moustache pointed beard, black Tang soft official cap, sage gray robe ivory inner collar, holding a slim blank manuscript. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294639549_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H059.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H060",
+    "name": "刘禹锡",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 刘禹锡. male Tang poet official age forty-five, resilient confident expression, broad forehead, neat dark moustache beard, black Tang court cap, pale ochre robe sage belt, holding rolled blank scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294680396_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H060.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H061",
+    "name": "柳宗元",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 柳宗元. male Tang essayist age forty, slender thoughtful somewhat melancholy face, fine moustache short beard, soft black Tang cap, ivory robe pale sage overcoat, holding a blank scroll with barely visible distant river. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294718643_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H061.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H062",
+    "name": "韩愈",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 韩愈. male Tang thinker writer age fifty, broad square face, firm eyebrows and direct principled gaze, full neat dark beard, black Tang official cap, muted ochre robe ivory collar, holding closed blank bound bamboo manuscript. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294834163_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H062.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H063",
+    "name": "李贺",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 李贺. male Tang poet age twenty-six, very slender youthful angular face, expressive long brows, clean-shaven, loose hair gathered under a small plain cap, pale sage robe cream sleeves, holding a blank paper roll with faint mountain mist. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294884652_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H063.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H064",
+    "name": "杜牧",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 杜牧. male Tang poet age thirty-five, handsome sharp features, playful thoughtful gaze, thin moustache and tiny beard, Tang black headscarf cap, cream sage robe ochre sash, holding plain folded blank paper. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294933092_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H064.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H065",
+    "name": "鱼玄机",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 鱼玄机. clearly female Tang poet age twenty-five, sharp expressive eyes and distinct narrow face, high Taoist-style dark hair bun with simple wooden pin, muted sage Taoist-inspired robe with ivory collar, holding a small blank poetry paper and brush. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792294998702_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H065.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H066",
+    "name": "薛涛",
+    "prompt": "Tang female poet early forties, coiled hair, sage ivory robe, pink blank paper and brush; reference-matched watercolor ink light-color, centered upper-third face, paper background; no text or UI",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792293353631_Create-a-standalone-1024x768-C.png",
+    "asset": "public/art/portraits/H066.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H089",
+    "name": "郑和",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 郑和. male Ming admiral navigator age forty-five, tall sturdy build, broad dignified clean-shaven face, black Ming official winged court cap, muted sage and ochre Ming round-collar robe, holding a rolled blank nautical chart, faint sailboat silhouette. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295668172_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H089.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H090",
+    "name": "李时珍",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 李时珍. male Ming physician naturalist age sixty, long weathered face with graying moustache and long gray beard, Ming soft black square cap, muted sage cream robe, holding a small green medicinal herb and blank book. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295692338_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H090.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H091",
+    "name": "徐霞客",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 徐霞客. male Ming traveler geographer age forty-five, rugged slim face with dark moustache and beard, cloth headscarf travel hat, cream robe sage cloak, bamboo walking staff and small travel pack, faint mountain cliffs. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792295836494_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H091.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H092",
+    "name": "徐光启",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 徐光启. male Ming scientist agronomist age fifty-five, broad mature face and neat gray beard, Ming black square scholar cap, pale sage cream Ming robe, holding rolled blank geometry manuscript with wheat stem, no symbols. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296037832_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H092.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H093",
+    "name": "宋应星",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 宋应星. male Ming technological author age forty-five, angular alert face with neat moustache and short beard, plain black Ming scholar cap, cream robe with ochre vest, holding a small wooden cog and blank bound book. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296103463_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H093.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H094",
+    "name": "唐寅",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 唐寅. male Ming painter poet age thirty-five, lively handsome oval face, thin moustache and small pointed beard, loose tied hair under soft black Ming scholar cap, sage ivory flowing robe, holding fine brush above blank painting scroll. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296163921_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H094.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H095",
+    "name": "文徵明",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 文徵明. male Ming painter calligrapher age sixty-five, calm slender elderly face, long white moustache and beard, black Ming scholar soft square cap, pale sage cream robe, holding calligraphy brush and blank paper. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296255457_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H095.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H096",
+    "name": "顾炎武",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 顾炎武. male Ming Qing transition scholar age fifty-five, firm contemplative angular face, long gray beard, Ming black plain square scholar cap, ochre ivory robe sage trim, holding a stack of blank bound books. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296342421_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H096.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H097",
+    "name": "王贞仪",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 王贞仪. clearly female Qing dynasty astronomer mathematician age twenty-six, intelligent determined oval face, modest Qing Han Chinese female pinned bun with simple jade hairpin, pale sage Qing Han woman's robe with ivory collar, holding small bronze armillary ring without markings, no Manchu court headdress. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296395057_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H097.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  },
+  {
+    "id": "H098",
+    "name": "沈寿",
+    "prompt": "Create standalone 1024x768 Chinese watercolor ink and light-color half-length portrait of 沈寿. clearly female late Qing early Republican embroidery artist age forty, composed focused face, Han Chinese woman modest neatly coiled dark hair with small simple hairpin, pale sage ivory late Qing high-collar jacket, holding wooden round embroidery hoop with a small muted flower stitched on silk and a fine needle. Use attached reference ONLY for painterly style and color palette, not same face. Warm almost-white #fffdfa paper, delicate ink linework, soft watercolor, muted sage/ochre palette, clean centered face upper third, soft faded edges at bottom, minimal pale landscape or bamboo background. Historically plausible attire, distinctly individual features. No UI/text/glyphs/labels/logos/seals/frames/modern items.",
+    "source": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792296424905_Create-standalone-1024x768-Chi.png",
+    "asset": "public/art/portraits/H098.webp",
+    "size": "1024x768",
+    "inspection": "Passed individual visual inspection: single historical character, no UI or text, consistent ink watercolor style"
+  }
+]

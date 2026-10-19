@@ -1,0 +1,106 @@
+# Mobile Prototype Agent Guide
+
+## Confirmed Product Direction
+
+- Product: 古代人格测试，面向手机的历史人物趣味性格测评网页。
+- Current requirements supersede the older illustrated prototype: use `../outputs/history-quiz-v0.3/01_需求文档与设计风格.md` and its 24-question / 100-person content package.
+- Preserve the existing mobile runtime. App-owned content follows a warm white, ink black, cinnabar style with Chinese serif headlines and sans-serif body text. On 2026-10-18, the user supplied a new start-page reference and explicitly requested that style: illustrated Chinese historical ensemble, mountain scenery, subtle paper texture, large two-line black/red heading, four features, instruction callout, and red start button. This supersedes the earlier no-illustration preference for the start page only. Match the supplied image; retain the existing quiz/result/share styles and functionality.
+- Implement start → 24 questions → deterministic six-axis match → result → image and result-link sharing. Within a test, keep answers when moving back. As of the user’s 2026-10-18 interaction update, the home button is always “开始测试” and always starts from question 1; remove restart, resume and last-result entry points. Clicking an option automatically advances after brief selected feedback; the last answer generates the result. Keep previous-question navigation, formal dimension headings and current-position progress such as “1/24 4%”. The latest result-page request below supersedes the earlier restriction on retesting. Historical sources and measurement validity remain drafts requiring review.
+- The user requested a first working webpage from the requirements on 2026-10-18. Reuse this existing project as the implementation target; no deployment has been requested.
+- Keep all quiz text and controls as accessible HTML; do not rasterize entire screens.
+- The current build is a local working prototype. The user has not yet requested a deployment target.
+
+- As of the user’s latest 2026-10-18 update, use “古代人格测试” consistently in headers, browser title, share poster and downloaded filename. Remove the content-review notice from the test instructions and remove the global entertainment disclaimer from app pages and poster. Group questions consecutively by decision, social, change, expression, focus and organization (4 questions each). The progress header shows a dimension-specific icon, dimension name, within-group position, overall question position and percentage. Keep stable question IDs and scoring; isolate drafts from the previous interleaved question order.
+
+- Latest scoped refinement (2026-10-18): the homepage brand, hero, content and start action share one full-page scroll; the home header is scrollable content, while its test-instructions BottomSheet remains outside the scroll. Remove Chinese full stops “。” from the instructions sheet and quiz UI copy (retain their content). Show the within-dimension count as “1/4” without “本组”. Remove the quiz header’s return-to-home button; retain previous-question editing.
+
+- Latest progress/icon update (2026-10-18): replace the within-dimension “1/4” with overall position and percentage (e.g. “9/24 38%”) on the same row as the dimension name; remove the duplicate progress row. Match the supplied icon silhouettes: brain, two people, crossed shuffle arrows, round speech bubble, eye and organizational tree. Keep the established warm red icon treatment.
+
+- Latest home/result update (2026-10-18): the homepage must not scroll or bounce; render it as a static fitted screen with all content and the start button visible on both devices. Use the supplied tall result reference for content hierarchy: match overview, character voice, portrait, six-axis tendency structure, three shared/observed traits, everyday behavior, blind spots/risks/advice, three product-authored messages. Preserve the actual six-axis scoring model; never invent additional measured abilities or historical quotations. Keep the established paper/cinnabar palette because the user requested the reference's display content. The result footer shows “分享我的测试结果”, with “重新测试” underneath; retest clears answers and returns to the homepage, where “开始测试” begins at question 1. New public links may include only a derived match percentage in addition to the existing summary; continue supporting older links and keep raw answers and axis scores local.
+
+## Prototype Instructions
+
+- Latest anonymous quota requirement (2026-10-19): use Cloudflare Worker + D1 for server-authoritative anonymous testing limits. Each anonymous cookie identity receives at most ten lifetime completed tests; preserve the existing public share card and limit only test submission and owner result APIs. Cookie reset, browser changes and device changes remain documented anonymous-identity limitations.
+- Latest quota interaction refinement (2026-10-19): do not show the remaining test count or an exhausted-state message on the homepage. Keep the start button available after quota loading; when the server reports that the anonymous identity has exceeded ten completed tests, show the toast “您已超过测试上限！”. Apply the same toast to a quota-exhausted response received during answer submission.
+
+- Latest share-page simplification (2026-10-18): remove the top “把这份同频，留作纪念” eyebrow, poster question/result-count line, poster figcaption, manual “无法保存或复制？” entry, link-privacy paragraph and localhost-preview note. Keep the actual result summary, QR code, save-image and copy-result-link actions. Retain the automatic fallback sheet for save/copy failures.
+
+- Latest homepage illustration refinement (2026-10-18): vary face orientations in the existing five-person ensemble. The central strategist and rightmost woman face the viewer; keep the other three in different side/three-quarter poses. Preserve the existing ink watercolor palette, scenery, group composition and homepage layout. Current asset: `/art/home-reference/historical-ensemble-v2.webp`; retain the original for comparison.
+
+- Latest copy refinement (2026-10-18): homepage description is exactly “通过多组情境选择，探索你的决断、洞察、表达与担当”. Remove the homepage footer's question/result count and “无需历史知识 · 无需登录” line; retain the start button and fitted non-scrolling layout. Share-card heading and corresponding share summary wording use “我的历史人物匹配结果是”.
+
+- Approved illustrated result/share direction (2026-10-18): use `design-concepts/result-portrait-jikang-preview.png` as the visual target. A watercolor ink half-length portrait precedes a side-by-side name/match identity row; metadata, tags and character voice remain below. Supply a distinct local `/art/portraits/Hxxx.webp` for each of the 100 characters, matched by stable person ID. Reuse the same portrait in own/public results and the downloadable 1080×1440 share poster, preserving the actual match, QR code and link. AI portraits are artistic interpretations, not authenticated likenesses. Keep text as HTML/canvas text and preserve the six report modules and current navigation. This explicitly extends the earlier illustration allowance to result and share pages.
+
+- Latest copy/list refinement (2026-10-18): display the four test-instruction paragraphs as a semantic bulleted list with a visible “·” before each item and hanging text alignment. Remove the quiz footer's “按照平常的你来选，不必寻找‘更好’的答案” guidance entirely; keep error messages conditional and retain automatic advancement with pressed-button feedback.
+
+- Latest quiz interaction refinement (2026-10-18): selecting an option keeps automatic advancement and simultaneously shows the next/result button in its pressed visual state throughout the 260ms feedback interval (full-opacity darker cinnabar, slight press offset and inset shadow). Keep it disabled/busy to prevent double advancement, reset feedback on entering the next question, and retain the disabled state for unanswered questions. Use the existing pending state, without an additional timer or a synthetic click.
+
+- Latest result hierarchy refinement (2026-10-18): remove the result header's home/back button. Keep “分享我的测试结果” as the primary action and render “重新测试” as a muted text-only button underneath, preserving a 44px touch target and its clear-answers/return-home behavior. Add consistent content-specific icons to all six report headings: person, bar chart, link, globe, warning triangle and quote. Apply the shared heading style to visitor reports too.
+
+In ChatGPT Work Mode, run `sites-preview start "$PWD"`, open `http://terminal.local:4173/` in the cloud browser, and verify the rendered app and its primary interactions. Keep that preview open and tell the user to inspect it in the cloud browser; do not present the local URL as a user-facing chat link. In Codex Desktop, run the local server yourself, open the preview in the in-app browser, and provide the clickable local URL. Do not deploy to Sites unless the user explicitly asks to share, publish, or deploy. Do not give the user server-start instructions when you can run it.
+
+Before planning or implementing any mobile-app change, read this `AGENTS.md` in full. It is the source of truth for the template's runtime and component guidance.
+
+Before making substantial visual changes, use the Product Design plugin's `get-context` skill when the visual source is unclear or no longer matches the current goal. When the user gives durable prototype-specific design feedback, preferences, or decisions, record them in `AGENTS.md`.
+
+When implementing from a selected generated mock, treat that image as the source of truth for layout, component anatomy, density, spacing, color, typography, visible content, and hierarchy.
+
+## Editing Boundary
+
+- Build app-specific UI in `src/Prototype.tsx` and `src/prototype.css`.
+- Treat `src/App.tsx`, `src/main.tsx`, `src/styles.css`, `src/mobile/`, `public/assets/iphone/`, `public/assets/android/`, `public/assets/status/`, `vite.config.ts`, `worker/index.js`, and `scripts/prepare-sites-build.mjs` as protected runtime files. Do not edit, replace, remove, or recreate them unless the user explicitly asks to change the mobile runtime itself. For an explicit runtime change, update the affected lock hashes only after verifying the new runtime behavior.
+- Run `npm run check:runtime` before preview or handoff. If it fails, restore the protected runtime instead of weakening or bypassing the check.
+- `npm run build` preserves the mobile runtime and prepares the static Cloudflare Worker output required by Sites. Before a Sites handoff, confirm `dist/client/index.html`, `dist/server/index.js`, `dist/.openai/hosting.json`, and source `.openai/hosting.json` exist, then run `npm run test:sites`. Do not replace this project with a Vinext starter.
+
+## Runtime Contract
+
+- Preserve the mobile device runtime unless the user's task explicitly asks otherwise. Do not replace it with a standalone page. Visual fidelity applies to app-owned content inside the device screen, not to template-owned device chrome.
+- Keep `App` composed around `PhoneFrame` -> `KeyboardProvider`, with `StatusBar`, app content, `HomeIndicator`, and `KeyboardDock` mounted inside the phone frame. `StatusBar` and the iOS home indicator are overlaid device chrome. When the Android keyboard is closed, the app viewport reserves the protected navigation-bar region instead of painting behind it. When the Android keyboard is open, preserve the current full-screen keyboard layout: its asset includes the IME navigation strip and the separate black navigation bar is hidden. iOS screens continue to paint behind the home-indicator area and own their safe-area content padding.
+- Preserve the `iPhone` / `Pixel 10` device picker and both calibrated device presets. The Pixel screen is `427 x 952`; its `32 x 32` camera circle and `public/assets/android/navigation-bar.svg` bottom navigation bar are protected device chrome, not app content.
+- Preserve the device picker's intentionally lightweight Codex styling in the top-right corner: its trigger wrapper is borderless and transparent, its trigger sizes to content, and its right-aligned menu uses the compact 3px inset plus the specified hairline and elevation shadow layers. Keep the prototype root and default app screen white.
+- Preserve `StatusBar` as live device chrome, including its platform-specific typography, source status-icon assets, and spacing. Pixel 10 uses Roboto, Android indicators, and 32px top, left, and right padding. iPhone uses its iOS indicators, system typography, and calibrated spacing. Do not hardcode screenshot times like `9:41` into the status bar, replace its real-time clock, or move status bar content into app markup unless the user explicitly asks for a fixed/mock device time.
+- `PhoneFrame` owns the calibrated device frame, screen portal, device picker, camera cutout, and custom cursor. Keep device assets in `public/assets/iphone/` and `public/assets/android/`; if an asset fails to load, repair the asset path or restore the asset instead of removing the frame, keyboard, or image render.
+- Use `MobileScroll` directly for simple single-screen prototypes. Use `FlowStack` for conventional multi-screen flows whose routes can own their fixed header and footer; when using it, define each route as a `FlowScreen`: `{ id, header?, headerHeight?, footer?, footerHeight?, render }`, and use `flow.push(screen)`, `flow.pop()`, and `flow.replace(screen)` from `FlowStack` render callbacks or `useFlow()` instead of introducing another router.
+- Use `Carousel` for a carousel, horizontal rail, swipeable cards, image or media strip, horizontally scrollable cards, chip rail, or other horizontal collection.
+- For a layered app shell—such as a persistent composer, independently presented sheet, pushed/peek sidebar, or app-wide transition—compose directly in `Prototype.tsx` rather than forcing it through `FlowStack`. Keep app-owned fixed chrome as sibling layers outside `MobileScroll`.
+- When using `FlowScreen`, put route-owned fixed headers or footers in `FlowScreen.header` or `FlowScreen.footer`. Set `headerHeight` to the visible app-toolbar height; `FlowStack` adds the device's top safe-area/status-bar inset automatically. Do not include `StatusBar` or its height in the header. Set `footerHeight` to the full app-footer height. `FlowScreen.footer` is an overlay, not reserved layout space; screens using it must add their own bottom content padding such as `padding-bottom: calc(var(--flow-footer-height) + var(--mobile-safe-area-height) + 24px)` so final content can scroll above the footer while still painting behind it.
+- Render only scrollable content inside `MobileScroll`; it is for content that should move with scroll and rubber-band overscroll. Keep app-owned headers, nav bars, tabs, composers, and overlays outside it. This keeps scroll physics, safe areas, keyboard insets, scrollbars, and drag click suppression active without letting content paint under fixed chrome.
+- Buttons, links, cards, and images inside `MobileScroll` should still allow drag scrolling when the pointer moves beyond tap slop. Use `data-scroll-drag="ignore"` only for rare controls that must own the drag gesture themselves.
+- Do not add `var(--keyboard-height)` to ordinary screen/content padding inside `MobileScroll`; the scroll viewport already shrinks above the simulated keyboard. For custom fixed composers, search bars, or toast chrome, use `useKeyboardInsets().bottomInset`. It is relative to the app viewport: Android returns `0` while the closed-keyboard viewport already reserves navigation, then returns the keyboard height while open; iOS continues to clear the home indicator while closed and ride directly above the keyboard while open. Do not pin custom bottom chrome to `bottom: 0` or only `keyboardHeight`.
+- Use `KeyboardInput`, `KeyboardTextarea`, or `MobileTextField` for every text-entry control. A raw `input` or `textarea` disconnects focus, keyboard animation, safe-area insets, and attached surfaces.
+- Use `BottomSheet` for phone-scoped sheets. Its props are `open`, `onOpenChange`, `title`, optional `description`, optional `snap`, and `children`; it renders through the phone screen portal and dismisses the keyboard before opening.
+
+## Horizontal Carousels
+
+- Use `Carousel` for horizontally draggable cards, images, media, chips, or other horizontal collections. Do not recreate these with `overflow-x`, custom pointer handlers, or a generic div.
+- `Carousel` can be nested directly inside `MobileScroll`. It owns horizontal gestures and automatically yields vertical gestures to the parent.
+- Never put `data-scroll-drag="ignore"` on or around a `Carousel`; doing so prevents vertical parent scrolling when a gesture begins inside it.
+- Do not add CSS scroll snapping to `Carousel`; its runtime owns momentum and release motion.
+- Use `data-scroll-drag="ignore"` only when a control must prevent parent scrolling in every drag direction.
+
+See `src/mobile/COMPONENTS.md` for the full component and gesture contract.
+
+## Keyboard Rule
+
+The simulated keyboard is a separate top-layer component. Before presenting anything that behaves like iOS navigation or modal UI, dismiss it first.
+
+Call `keyboard.hide()` before:
+
+- pushing, popping, or replacing FlowStack routes
+- opening bottom sheets, action sheets, dialogs, menus, or navigation sheets
+- starting transitions where the destination should not inherit text-input focus
+
+`FlowStack` already hides the keyboard for `push`, `pop`, and `replace`. `BottomSheet` already hides it before opening. If you add new modal/sheet/navigation primitives, follow the same rule.
+
+When a composer, search surface, or other keyboard-attached component closes, call `keyboard.hide()` in the same event before changing that component's open state. Position attached surfaces from `useKeyboardInsets()` rather than a separate timer or visibility flag so both dismiss together.
+
+When any text-entry control loses focus, dismiss the simulated keyboard. If the control is custom or does not use the runtime's keyboard-aware fields, handle its blur event and call `keyboard.hide()` explicitly. Keep the keyboard open only when focus is moving directly to another text-entry control that should share the same keyboard session.
+
+## Interaction Rules
+
+- Do not trigger buttons or inputs after a pointer has become a drag. Preserve the drag suppression behavior in `MobileScroll`.
+- Do not allow native browser image/file dragging inside the phone frame. Preserve the phone-level `dragstart` suppression and non-draggable image styles so scroll drags that begin on images still scroll the prototype.
+- Use `KeyboardInput`, `KeyboardTextarea`, or `MobileTextField` for text entry so the simulated keyboard and safe-area insets stay connected.
+- Fixed phone chrome should not animate with pushed screens. Screen content can animate; the status bar, camera cutout, and preview chrome should stay put.
+- Keep the keyboard below the home indicator/safe area layer in z-index, and above ordinary app UI while visible.
+- Keep the home indicator as the topmost safe-area layer in the z-index above everything else in the prototype.

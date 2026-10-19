@@ -1,0 +1,14 @@
+name = "history-quiz"
+main = "dist/server/index.js"
+compatibility_date = "2026-10-19"
+
+[assets]
+directory = "./dist/client"
+binding = "ASSETS"
+
+# Replace the database_id after creating a free D1 database in Cloudflare.
+[[d1_databases]]
+binding = "DB"
+database_name = "history-quiz"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"

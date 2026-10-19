@@ -1,0 +1,11 @@
+{
+  "tool": "mcp__gpt_image__edit_image",
+  "source": "public/art/home-reference/historical-ensemble.webp",
+  "generatedSource": "/Users/zuoyi/Documents/平时工作会话/generated-images/1792302525809_Use-case-precise-object-edit.png",
+  "output": "public/art/home-reference/historical-ensemble-v2.webp",
+  "dimensions": [
+    853,
+    595
+  ],
+  "prompt": "Use case: precise-object-edit. Edit the supplied homepage Chinese historical ensemble illustration. Change ONLY the head orientation and facial gaze of two people to create varied portrait angles: (1) the central male strategist wearing the tall dark striped hat and holding a feather fan must face directly forward, eyes looking toward the viewer, with a clear symmetrical frontal face; (2) the young woman at far right in pale blue-green robes holding a brown book must also face forward toward the viewer, with a natural frontal face, retaining her own distinct feminine features. Keep the leftmost older scholar looking left, the woman in cinnabar patterned robes in a gently downward three-quarter pose, and the tall armored warrior in the rear looking right. IMPORTANT: retain exactly the same FIVE people, identities, ages, hats, hair ornaments, garments, fan, book, scroll, hands, poses, positions, scale, layering and overall composition. Preserve all existing mountain scenery, pavilion on upper right, fine ink linework, watercolor shading, warm ivory paper, muted cinnabar and blue-gray palette, upper negative space and bottom feathered fade. Seamlessly integrate the altered heads with their original necks and costumes, correct natural anatomy and detailed eyes. Do not add anyone, no new objects, no text, no labels, no border, no watermark. This is an illustration asset only, not a screenshot or UI. Match input image aspect ratio."
+}
