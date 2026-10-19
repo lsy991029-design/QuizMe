@@ -1,9 +1,9 @@
 import { calculateResult, type Answer, type QuizResult } from './quiz';
 
 export type QuotaSnapshot = {
-  limit: number;
+  limit: number | null;
   used: number;
-  remaining: number;
+  remaining: number | null;
   canTest: boolean;
 };
 
@@ -26,11 +26,10 @@ const DEV_ATTEMPTS_KEY = 'history-quiz:dev-anonymous-attempts:v1';
 function devQuota(): QuotaSnapshot {
   try {
     const stored = JSON.parse(localStorage.getItem(DEV_QUOTA_KEY) || '{"limit":10,"used":0}');
-    const limit = 10;
-    const used = Math.max(0, Math.min(limit, Number(stored.used) || 0));
-    return { limit, used, remaining: limit - used, canTest: used < limit };
+    const used = Math.max(0, Number(stored.used) || 0);
+    return { limit: null, used, remaining: null, canTest: true };
   } catch {
-    return { limit: 10, used: 0, remaining: 10, canTest: true };
+    return { limit: null, used: 0, remaining: null, canTest: true };
   }
 }
 
@@ -83,9 +82,8 @@ export function submitTest(input: { idempotencyKey: string; answers: Answer[] })
     const existing = devAttempts()[input.idempotencyKey];
     if (existing) return Promise.resolve({ duplicate: true, result: existing, quota: devQuota() });
     const quota = devQuota();
-    if (!quota.canTest) return Promise.reject(new QuotaApiError('TEST_QUOTA_EXHAUSTED', '本匿名身份的测试次数已用完。', 409));
     const result = calculateResult(input.answers);
-    const next = { ...quota, used: quota.used + 1, remaining: quota.remaining - 1, canTest: quota.used + 1 < quota.limit };
+    const next = { ...quota, used: quota.used + 1, remaining: null, canTest: true };
     setDevQuota(next);
     try { localStorage.setItem(DEV_ATTEMPTS_KEY, JSON.stringify({ ...devAttempts(), [input.idempotencyKey]: result })); } catch { /* local preview only */ }
     return Promise.resolve({ duplicate: false, result, quota: next });

@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MIGRATION = (ROOT / "migrations" / "0001_anonymous_quota.sql").read_text()
 MIGRATION_2 = (ROOT / "migrations" / "0002_increase_anonymous_quota_to_10.sql").read_text()
+MIGRATION_3 = (ROOT / "migrations" / "0003_remove_anonymous_quota_limit.sql").read_text()
 
 
 def connection(path, apply_upgrade=True):
@@ -16,6 +17,7 @@ def connection(path, apply_upgrade=True):
     db.executescript(MIGRATION)
     if apply_upgrade:
         db.executescript(MIGRATION_2)
+        db.executescript(MIGRATION_3)
     return db
 
 
@@ -62,11 +64,12 @@ with tempfile.TemporaryDirectory() as directory:
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
         outcomes = list(pool.map(lambda i: insert_attempt(db_path, "visitor-a", f"key-{i}"), range(20)))
-    assert sum(outcomes) == 10, outcomes
+    assert sum(outcomes) == 20, outcomes
 
     db = connection(db_path)
-    assert db.execute("SELECT tests_used FROM anonymous_visitors WHERE id = 'visitor-a'").fetchone()[0] == 10
-    assert db.execute("SELECT COUNT(*) FROM personality_test_attempts WHERE visitor_id = 'visitor-a' AND status = 'completed'").fetchone()[0] == 10
+    assert db.execute("SELECT tests_used FROM anonymous_visitors WHERE id = 'visitor-a'").fetchone()[0] == 0
+    assert db.execute("SELECT status FROM anonymous_visitors WHERE id = 'visitor-a'").fetchone()[0] == 'active'
+    assert db.execute("SELECT COUNT(*) FROM personality_test_attempts WHERE visitor_id = 'visitor-a' AND status = 'completed'").fetchone()[0] == 20
     assert db.execute("SELECT tests_used FROM anonymous_visitors WHERE id = 'visitor-b'").fetchone()[0] == 0
     duplicate_key = db.execute("SELECT idempotency_key FROM personality_test_attempts WHERE visitor_id = 'visitor-a' LIMIT 1").fetchone()[0]
     try:
@@ -79,15 +82,10 @@ with tempfile.TemporaryDirectory() as directory:
         assert "UNIQUE" in str(error).upper()
     else:
         raise AssertionError("duplicate idempotency key unexpectedly inserted")
-    try:
-        db.execute(
-            "INSERT INTO personality_test_attempts (id, visitor_id, idempotency_key, test_type, status, result_data, created_at) "
-            "VALUES ('fourth', 'visitor-a', 'fourth-key', 'history-personality', 'completed', '{}', datetime('now'))"
-        )
-    except sqlite3.DatabaseError as error:
-        assert "TEST_QUOTA_EXHAUSTED" in str(error)
-    else:
-        raise AssertionError("fourth completed attempt unexpectedly succeeded")
+    db.execute(
+        "INSERT INTO personality_test_attempts (id, visitor_id, idempotency_key, test_type, status, result_data, created_at, completed_at) "
+        "VALUES ('additional', 'visitor-a', 'additional-key', 'history-personality', 'completed', '{}', datetime('now'), datetime('now'))"
+    )
     db.close()
 
 print("D1 quota migration and SQLite concurrency checks passed")

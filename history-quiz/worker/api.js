@@ -47,9 +47,10 @@ function cookieHeader(token, requestUrl) {
 }
 
 function quotaFromRow(row) {
-  const limit = Number(row?.test_limit ?? 0);
   const used = Number(row?.tests_used ?? 0);
-  return { limit, used, remaining: Math.max(0, limit - used), canTest: row?.status === "active" && used < limit };
+  // Kept as a backwards-compatible response shape for existing clients. The
+  // server no longer blocks submissions based on a lifetime test count.
+  return { limit: null, used, remaining: null, canTest: true };
 }
 
 async function visitorFromCookie(request, db) {
@@ -114,10 +115,6 @@ async function currentQuota(db, visitorId) {
   return quotaFromRow(row);
 }
 
-function isQuotaError(reason) {
-  return reason instanceof Error && /TEST_QUOTA_EXHAUSTED|SQLITE_CONSTRAINT/i.test(reason.message);
-}
-
 async function findAttempt(db, visitorId, idempotencyKey) {
   const row = await db.prepare("SELECT id, status, result_data FROM personality_test_attempts WHERE visitor_id = ?1 AND idempotency_key = ?2").bind(visitorId, idempotencyKey).first();
   if (!row) return null;
@@ -151,7 +148,6 @@ async function submit(request, db) {
       VALUES (?1, ?2, ?3, ?4, 'completed', ?5, ?6, ?6)`)
       .bind(attemptId, visitor.id, body.idempotencyKey, TEST_TYPE, JSON.stringify(result), now).run();
   } catch (reason) {
-    if (isQuotaError(reason)) return error("TEST_QUOTA_EXHAUSTED", 409, "本匿名身份的测试次数已用完。");
     const duplicate = await findAttempt(db, visitor.id, body.idempotencyKey);
     if (duplicate?.result) return json({ duplicate: true, result: duplicate.result, quota: await currentQuota(db, visitor.id) });
     if (duplicate) return error("DUPLICATE_REQUEST", 409, "该请求正在处理中，请稍后重试。");

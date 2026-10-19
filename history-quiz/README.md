@@ -57,23 +57,23 @@ npm run build
 - 首页改为静态页面，自适应 iPhone / Pixel 的有效高度；测试说明弹窗、题目页和长结果报告仍保留各自需要的滚动。
 - 验证：8 项数据测试、生产构建与 28 个运行时保护文件检查通过；浏览器完成全程答题、分享、重新测试、公开链接和双设备首页手势检查。
 
-## 匿名测试次数限制
+## 匿名身份与测试记录
 
-测试提交使用 Cloudflare Worker + D1 实现匿名额度控制。每个匿名浏览器身份默认拥有 10 次测试额度，额度由服务端数据库记录，首页不提前展示剩余次数；当提交超过上限时，页面提示“您已超过测试上限！”。匿名凭证通过 HttpOnly、SameSite=Lax Cookie 保存，数据库只保存凭证哈希；生产 HTTPS 环境会自动追加 Secure 属性。
+测试提交使用 Cloudflare Worker + D1 保存匿名身份和测试记录，不再限制单个匿名身份的累计测试次数。匿名凭证通过 HttpOnly、SameSite=Lax Cookie 保存，数据库只保存凭证哈希；生产 HTTPS 环境会自动追加 Secure 属性。服务端仍保留请求频率限制、答案校验和幂等键，避免重复提交和异常流量。
 
-数据库迁移位于 `migrations/0001_anonymous_quota.sql`，包含 `anonymous_visitors`、`personality_test_attempts` 和请求频率表。完成状态的测试记录通过 SQLite 触发器原子扣减额度；重复幂等键返回已有结果，并发请求不能突破额度上限。失败状态不会消耗额度。当前公开分享卡继续使用现有 URL hash，不承担额度授权职责。
+数据库迁移位于 `migrations/0001_anonymous_quota.sql` 至 `migrations/0003_remove_anonymous_quota_limit.sql`。前两次迁移保留历史表结构，第三次迁移移除原有额度触发器并恢复历史上被标记为 blocked 的匿名身份。当前公开分享卡继续使用现有 URL hash，不承担身份授权职责。
 
 服务端接口如下：
 
-- `POST /api/anonymous/session`：创建或恢复匿名会话并返回 `limit`、`used`、`remaining`、`canTest`。
-- `GET /api/tests/quota`：读取当前匿名身份额度。
+- `POST /api/anonymous/session`：创建或恢复匿名会话，并返回兼容旧客户端的状态字段；`limit` 与 `remaining` 为 `null`。
+- `GET /api/tests/quota`：读取当前匿名身份状态；`canTest` 始终为 `true`，不再表示累计次数上限。
 - `POST /api/tests/submit`：提交 `{ testType: "history-personality", idempotencyKey, answers }`，服务端重新校验答案并生成结果。
 - `GET /api/tests`：读取当前匿名身份的测试记录。
 - `GET /api/tests/:id`：读取当前匿名身份自己的指定结果，不能仅凭结果 ID 越权访问。
 
-错误码包括 `TEST_QUOTA_EXHAUSTED`、`INVALID_ANONYMOUS_SESSION`、`DUPLICATE_REQUEST`、`INVALID_TEST_PAYLOAD`、`RATE_LIMITED` 和 `TEST_PROCESSING_FAILED`。数据库管理权限只配置在 Worker 的 D1 绑定中，仓库不保存数据库管理密钥或真实数据库 ID。
+错误码包括 `INVALID_ANONYMOUS_SESSION`、`DUPLICATE_REQUEST`、`INVALID_TEST_PAYLOAD`、`RATE_LIMITED` 和 `TEST_PROCESSING_FAILED`。数据库管理权限只配置在 Worker 的 D1 绑定中，仓库不保存数据库管理密钥或真实数据库 ID。
 
-部署时复制 `wrangler.toml.example` 为 `wrangler.toml`，创建 D1 数据库并填入 `database_id`，然后执行迁移和构建。当前本地 Vite 预览使用仅开发环境的本地额度适配器；生产构建只调用服务端 API。匿名身份可以通过清除 Cookie、更换浏览器或设备重新创建，这是匿名机制的已知边界。
+部署时复制 `wrangler.toml.example` 为 `wrangler.toml`，创建 D1 数据库并填入 `database_id`，然后执行迁移和构建。当前本地 Vite 预览使用仅开发环境的本地记录适配器；生产构建只调用服务端 API。匿名身份可以通过清除 Cookie、更换浏览器或设备重新创建，这是匿名机制的已知边界。
 
 ## 人物插图（2026-10-18）
 

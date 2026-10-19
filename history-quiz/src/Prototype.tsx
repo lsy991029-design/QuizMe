@@ -6,7 +6,7 @@ import { clearShareHash, DRAFT_KEY, freshDraft, loadSession, makeShareUrl, readS
 import { createPoster } from './poster';
 import { buildReport } from './report';
 import { portraitUrl } from './portraits';
-import { createAnonymousSession, getQuota, QuotaApiError, submitTest, type QuotaSnapshot } from './quota';
+import { createAnonymousSession, QuotaApiError, submitTest, type QuotaSnapshot } from './quota';
 
 type QuizState = {
   draft: Draft; updateDraft: (draft: Draft) => void; result: QuizResult | null;
@@ -99,10 +99,6 @@ function HomeFooter({ flow }: { flow: FlowControls }) {
   const start = async () => {
     const quota = quiz.quota ?? await quiz.refreshQuota();
     if (!quota) return;
-    if (!quota.canTest) {
-      quiz.showToast('您已超过测试上限！');
-      return;
-    }
     quiz.startNew(); clearShareHash(); flow.replace(quizScreen);
   };
   return <div className="home-footer reference-home-footer">
@@ -347,14 +343,8 @@ export default function Prototype() {
       flow.replace(resultScreen);
     } catch (reason) {
       if (reason instanceof QuotaApiError) {
-        if (reason.code === 'TEST_QUOTA_EXHAUSTED') {
-          setQuizError('');
-          showToast('您已超过测试上限！');
-          void refreshQuota();
-        } else {
-          setQuizError(reason.message);
-          if (reason.code === 'INVALID_ANONYMOUS_SESSION') void refreshQuota();
-        }
+        setQuizError(reason.message);
+        if (reason.code === 'INVALID_ANONYMOUS_SESSION') void refreshQuota();
       } else {
         setQuizError('结果暂时无法生成，答案已保留，请重试。');
       }

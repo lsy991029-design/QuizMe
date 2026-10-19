@@ -20,8 +20,7 @@
 
 ## Prototype Instructions
 
-- Latest anonymous quota requirement (2026-10-19): use Cloudflare Worker + D1 for server-authoritative anonymous testing limits. Each anonymous cookie identity receives at most ten lifetime completed tests; preserve the existing public share card and limit only test submission and owner result APIs. Cookie reset, browser changes and device changes remain documented anonymous-identity limitations.
-- Latest quota interaction refinement (2026-10-19): do not show the remaining test count or an exhausted-state message on the homepage. Keep the start button available after quota loading; when the server reports that the anonymous identity has exceeded ten completed tests, show the toast “您已超过测试上限！”. Apply the same toast to a quota-exhausted response received during answer submission.
+- Latest anonymous testing policy (2026-10-20): use the anonymous cookie with Cloudflare Worker + D1 for ownership of test records, but do not enforce a lifetime test-count limit. Preserve the existing public share card, answer validation, idempotency, and request-rate protection. Cookie reset, browser changes and device changes remain documented anonymous-identity limitations.
 
 - Latest share-page simplification (2026-10-18): remove the top “把这份同频，留作纪念” eyebrow, poster question/result-count line, poster figcaption, manual “无法保存或复制？” entry, link-privacy paragraph and localhost-preview note. Keep the actual result summary, QR code, save-image and copy-result-link actions. Retain the automatic fallback sheet for save/copy failures.
 

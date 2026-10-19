@@ -42,9 +42,6 @@ class MemoryStatement {
       const [id, visitorId, idempotencyKey, testType, resultData, now] = this.args;
       if (this.db.attempts.has(id)) throw new Error('UNIQUE constraint failed');
       if ([...this.db.attempts.values()].some((row) => row.visitor_id === visitorId && row.idempotency_key === idempotencyKey)) throw new Error('UNIQUE constraint failed');
-      const visitor = this.db.visitors.get(visitorId);
-      if (!visitor || visitor.status !== 'active' || visitor.tests_used >= visitor.test_limit) throw new Error('TEST_QUOTA_EXHAUSTED');
-      visitor.tests_used += 1;
       this.db.attempts.set(id, { id, visitor_id: visitorId, idempotency_key: idempotencyKey, test_type: testType, status: 'completed', result_data: resultData, created_at: now, completed_at: now });
       return { success: true };
     }
@@ -68,30 +65,26 @@ test('server scoring uses the current 24-question and 100-person content', () =>
   assert.ok(result.personId.startsWith('H'));
 });
 
-test('D1 migration enforces quota atomically under concurrent SQLite writes', () => {
+test('D1 migration removes the lifetime quota trigger while preserving identity records', () => {
   execFileSync('python3', ['tests/d1_migration_test.py'], { stdio: 'inherit' });
 });
 
-test('API keeps quota server-authoritative and idempotent', async () => {
+test('API keeps anonymous ownership and idempotency without a lifetime quota', async () => {
   const db = new MemoryD1();
   const first = await createSession(db);
-  assert.equal(first.body.remaining, 10);
+  assert.equal(first.body.remaining, null);
   const answers = Array(24).fill('A');
-  const keys = Array.from({ length: 10 }, () => crypto.randomUUID());
+  // Eleven successful submissions prove the old ten-test lifetime gate is gone
+  // while staying within the independent request-rate protection window.
+  const keys = Array.from({ length: 11 }, () => crypto.randomUUID());
   for (const [index, key] of keys.entries()) {
     const response = await handleApiRequest(new Request('https://quiz.example/api/tests/submit', {
       method: 'POST', headers: { cookie: first.cookie, 'content-type': 'application/json' }, body: JSON.stringify({ testType: 'history-personality', idempotencyKey: key, answers }),
     }), { DB: db });
     const body = await readJson(response);
     assert.equal(response.status, 200);
-    assert.equal(body.quota.remaining, 9 - index);
+    assert.equal(body.quota.canTest, true);
   }
-  const exhausted = await handleApiRequest(new Request('https://quiz.example/api/tests/submit', {
-    method: 'POST', headers: { cookie: first.cookie, 'content-type': 'application/json' }, body: JSON.stringify({ testType: 'history-personality', idempotencyKey: crypto.randomUUID(), answers }),
-  }), { DB: db });
-  assert.equal(exhausted.status, 409);
-  assert.equal((await readJson(exhausted)).error.code, 'TEST_QUOTA_EXHAUSTED');
-
   const duplicate = await handleApiRequest(new Request('https://quiz.example/api/tests/submit', {
     method: 'POST', headers: { cookie: first.cookie, 'content-type': 'application/json' }, body: JSON.stringify({ testType: 'history-personality', idempotencyKey: keys[0], answers }),
   }), { DB: db });
