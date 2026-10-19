@@ -7,6 +7,7 @@ import { createPoster } from './poster';
 import { buildReport } from './report';
 import { portraitUrl } from './portraits';
 import { createAnonymousSession, QuotaApiError, submitTest, type QuotaSnapshot } from './quota';
+import { assetUrl } from './assets';
 
 type QuizState = {
   draft: Draft; updateDraft: (draft: Draft) => void; result: QuizResult | null;
@@ -87,9 +88,9 @@ function Home({ flow }: { flow: FlowControls }) {
     { icon: 'speed', title: '快速完成', text: '即刻查看结果' },
   ];
   return <><HomeCanvas><HomeHeader onInfo={() => setInfo(true)} /><StorageNotice />
-    <section className="home-hero"><div className="home-heading"><h1>如果生在古代<br />你会<span>是谁</span></h1><p lang="en">Historical Personality Quiz</p><img className="home-seal" src="/art/home-reference/seal.webp" alt="" aria-hidden="true" /></div><img className="home-ensemble" src="/art/home-reference/historical-ensemble-v2.webp" alt="中国古代文士、女性与将领群像，背景为山水楼阁" draggable={false} /></section>
+    <section className="home-hero"><div className="home-heading"><h1>如果生在古代<br />你会<span>是谁</span></h1><p lang="en">Historical Personality Quiz</p><img className="home-seal" src={assetUrl('art/home-reference/seal.webp')} alt="" aria-hidden="true" /></div><img className="home-ensemble" src={assetUrl('art/home-reference/historical-ensemble-v2.webp')} alt="中国古代文士、女性与将领群像，背景为山水楼阁" draggable={false} /></section>
     <p className="home-description">通过多组情境选择，探索你的决断、洞察、表达与担当</p>
-    <section className="home-features" aria-label="测试特点">{features.map(feature => <div className="home-feature" key={feature.icon}><img src={`/art/home-reference/${feature.icon}.webp`} alt="" aria-hidden="true" draggable={false} /><div><h2>{feature.title}</h2><p>{feature.text}</p></div></div>)}</section>
+    <section className="home-features" aria-label="测试特点">{features.map(feature => <div className="home-feature" key={feature.icon}><img src={assetUrl(`art/home-reference/${feature.icon}.webp`)} alt="" aria-hidden="true" draggable={false} /><div><h2>{feature.title}</h2><p>{feature.text}</p></div></div>)}</section>
     <aside className="home-instructions"><h2>测试说明</h2><p>没有标准答案，请选择最接近真实自己的反应。</p></aside>
     <HomeFooter flow={flow} />
   </HomeCanvas><InfoSheet open={info} onClose={() => setInfo(false)} /></>;

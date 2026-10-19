@@ -1,6 +1,7 @@
 import type { Character } from './quiz';
+import { assetUrl } from './assets';
 
-export const portraitUrl = (person: Pick<Character, 'id'>) => `/art/portraits/${person.id}.webp`;
+export const portraitUrl = (person: Pick<Character, 'id'>) => assetUrl(`art/portraits/${person.id}.webp`);
 
 export function loadPortrait(person: Character): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {

@@ -42,7 +42,7 @@ function devAttempts(): Record<string, QuizResult> {
 }
 
 function localDevEnabled() {
-  return import.meta.env.DEV;
+  return import.meta.env.DEV || import.meta.env.VITE_STATIC_PREVIEW === 'true';
 }
 
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
