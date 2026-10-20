@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEvent, type ReactNode } from 'react';
 import { ArrowRightIcon, BarChartIcon, CheckIcon, ChevronLeftIcon, Cross2Icon, DownloadIcon, ExclamationTriangleIcon, GlobeIcon, Link2Icon, QuoteIcon, ReloadIcon, PersonIcon } from '@radix-ui/react-icons';
-import { BottomSheet, FlowStack, MobileScroll, useFlow, useMobileDevice, type FlowControls, type FlowScreen } from './mobile';
+import { BottomSheet, FlowStack, MobileScroll, useFlow, useMobileDevice, useMobileRuntimeMode, type FlowControls, type FlowScreen } from './mobile';
 import { dimensions, findCharacter, PRODUCT_NAME, questions, type Answer, type Character, type DimensionId, type PublicResult, type QuizResult } from './quiz';
 import { clearShareHash, DRAFT_KEY, freshDraft, loadSession, makeShareUrl, readSharedResult, RESULT_KEY, type Draft } from './session';
 import { createPoster } from './poster';
@@ -61,6 +61,8 @@ function HomeHeader({ onInfo }: { onInfo: () => void }) {
 }
 function HomeCanvas({ children }: { children: ReactNode }) {
   const { device } = useMobileDevice();
+  const runtimeMode = useMobileRuntimeMode();
+  const fullscreen = runtimeMode === 'fullscreen';
   const flow = useFlow();
   const host = useRef<HTMLDivElement>(null);
   const content = useRef<HTMLElement>(null);
@@ -68,7 +70,7 @@ function HomeCanvas({ children }: { children: ReactNode }) {
   useLayoutEffect(() => {
     const resize = () => {
       if (!host.current || !content.current) return;
-      const available = host.current.clientHeight - device.geometry.safeArea.top - (device.platform === 'ios' ? device.geometry.safeArea.bottom : 0);
+      const available = host.current.clientHeight - (fullscreen ? 0 : device.geometry.safeArea.top) - (!fullscreen && device.platform === 'ios' ? device.geometry.safeArea.bottom : 0);
       setScale(Math.min(1, Math.max(0, available) / Math.max(1, content.current.scrollHeight)));
     };
     const observer = new ResizeObserver(resize);
@@ -76,8 +78,8 @@ function HomeCanvas({ children }: { children: ReactNode }) {
     if (content.current) observer.observe(content.current);
     resize();
     return () => observer.disconnect();
-  }, [device]);
-  return <div className="home-static" ref={host} style={{ paddingTop: device.geometry.safeArea.top, paddingBottom: device.platform === 'ios' ? device.geometry.safeArea.bottom : 0 }}><main ref={content} className="history-page home-page" aria-hidden={flow.current.id !== 'home'} inert={flow.current.id !== 'home'} style={{ transform: `scale(${scale})` }}>{children}</main></div>;
+  }, [device, fullscreen]);
+  return <div className="home-static" ref={host} style={{ paddingTop: fullscreen ? 0 : device.geometry.safeArea.top, paddingBottom: !fullscreen && device.platform === 'ios' ? device.geometry.safeArea.bottom : 0 }}><main ref={content} className="history-page home-page" aria-hidden={flow.current.id !== 'home'} inert={flow.current.id !== 'home'} style={{ transform: `scale(${scale})` }}>{children}</main></div>;
 }
 function Home({ flow }: { flow: FlowControls }) {
   const [info, setInfo] = useState(false);

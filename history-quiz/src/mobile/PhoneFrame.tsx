@@ -12,6 +12,7 @@ import {
 } from "react";
 import { DevicePicker, useMobileDevice } from "./Device";
 import { useMobileCursor } from "./MobileCursor";
+import type { MobileRuntimeMode } from "./MobileRuntime";
 
 type ScreenPortalContextValue = {
   screenRef: RefObject<HTMLDivElement | null>;
@@ -61,7 +62,10 @@ function useDeviceScale(deviceWidth: number, deviceHeight: number) {
   return scale;
 }
 
-export function PhoneFrame({ children }: PropsWithChildren) {
+export function PhoneFrame({
+  children,
+  mode = "device",
+}: PropsWithChildren<{ mode?: MobileRuntimeMode }>) {
   const { device } = useMobileDevice();
   const { geometry } = device;
   const scale = useDeviceScale(geometry.device.width, geometry.device.height);
@@ -71,74 +75,88 @@ export function PhoneFrame({ children }: PropsWithChildren) {
 
   return (
     <ScreenPortalContext.Provider value={contextValue}>
-      <div className="phone-stage">
-        <DevicePicker />
+      {mode === "fullscreen" ? (
         <div
-          className="phone-scale-box"
-          style={{
-            width: geometry.device.width * scale,
-            height: geometry.device.height * scale,
-          }}
+          ref={screenRef}
+          className="web-stage"
+          data-device={device.id}
+          data-platform={device.platform}
+          data-phone-screen
+          data-testid="web-stage"
+          onDragStartCapture={suppressNativeDrag}
         >
+          {children}
+        </div>
+      ) : (
+        <div className="phone-stage">
+          <DevicePicker />
           <div
-            className="phone-device"
-            data-device={device.id}
-            data-platform={device.platform}
-            data-testid="phone-frame"
-            onDragStartCapture={suppressNativeDrag}
+            className="phone-scale-box"
             style={{
-              width: geometry.device.width,
-              height: geometry.device.height,
-              transform: `scale(${scale})`,
+              width: geometry.device.width * scale,
+              height: geometry.device.height * scale,
             }}
           >
-            <img
-              className="phone-bezel"
-              src={device.bezel}
-              alt=""
-              aria-hidden="true"
-              draggable={false}
-              style={{ zIndex: device.bezelLayer === "above-screen" ? 2 : 1 }}
-            />
             <div
-              ref={screenRef}
-              className="device-screen"
-              data-cursor-debug={mobileCursor.cursorDebug ? "true" : "false"}
+              className="phone-device"
               data-device={device.id}
-              data-phone-screen
-              data-testid="device-screen"
-              {...mobileCursor.cursorHandlers}
-              style={
-                {
-                  "--device-safe-area-bottom": `${geometry.safeArea.bottom}px`,
-                  left: geometry.screen.x,
-                  top: geometry.screen.y,
-                  width: geometry.screen.width,
-                  height: geometry.screen.height,
-                  borderRadius: geometry.screen.radius,
-                  zIndex: device.bezelLayer === "above-screen" ? 1 : 2,
-                } as CSSProperties
-              }
+              data-platform={device.platform}
+              data-testid="phone-frame"
+              onDragStartCapture={suppressNativeDrag}
+              style={{
+                width: geometry.device.width,
+                height: geometry.device.height,
+                transform: `scale(${scale})`,
+              }}
             >
-              {children}
-              {device.camera ? (
-                <span
-                  className="device-camera"
-                  data-testid="device-camera"
-                  aria-hidden="true"
-                  style={{
-                    width: device.camera.size,
-                    height: device.camera.size,
-                    top: device.camera.top,
-                    left: `calc(50% - ${device.camera.size / 2}px)`,
-                  }}
-                />
-              ) : null}
-              {mobileCursor.cursorElement}
+              <img
+                className="phone-bezel"
+                src={device.bezel}
+                alt=""
+                aria-hidden="true"
+                draggable={false}
+                style={{ zIndex: device.bezelLayer === "above-screen" ? 2 : 1 }}
+              />
+              <div
+                ref={screenRef}
+                className="device-screen"
+                data-cursor-debug={mobileCursor.cursorDebug ? "true" : "false"}
+                data-device={device.id}
+                data-phone-screen
+                data-testid="device-screen"
+                {...mobileCursor.cursorHandlers}
+                style={
+                  {
+                    "--device-safe-area-bottom": `${geometry.safeArea.bottom}px`,
+                    left: geometry.screen.x,
+                    top: geometry.screen.y,
+                    width: geometry.screen.width,
+                    height: geometry.screen.height,
+                    borderRadius: geometry.screen.radius,
+                    zIndex: device.bezelLayer === "above-screen" ? 1 : 2,
+                  } as CSSProperties
+                }
+              >
+                {children}
+                {device.camera ? (
+                  <span
+                    className="device-camera"
+                    data-testid="device-camera"
+                    aria-hidden="true"
+                    style={{
+                      width: device.camera.size,
+                      height: device.camera.size,
+                      top: device.camera.top,
+                      left: `calc(50% - ${device.camera.size / 2}px)`,
+                    }}
+                  />
+                ) : null}
+                {mobileCursor.cursorElement}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </ScreenPortalContext.Provider>
   );
 }

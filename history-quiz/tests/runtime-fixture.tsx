@@ -139,12 +139,26 @@ function FlowFixture() {
   );
 }
 
+function FullscreenFixture() {
+  return (
+    <MobileRuntime mode="fullscreen">
+      <MobileScroll className="fixture-screen">
+        <main className="fixture-content">
+          <h1>Fullscreen fixture</h1>
+        </main>
+      </MobileScroll>
+    </MobileRuntime>
+  );
+}
+
 const fixture = new URLSearchParams(window.location.search).get("fixture");
 const fixtureElement =
   fixture === "keyboard"
     ? <KeyboardFixture />
     : fixture === "flow"
       ? <FlowFixture />
+      : fixture === "fullscreen"
+        ? <FullscreenFixture />
       : <CarouselFixture />;
 
 createRoot(document.getElementById("root")!).render(

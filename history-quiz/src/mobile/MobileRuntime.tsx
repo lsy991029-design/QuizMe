@@ -1,22 +1,35 @@
-import { useEffect, type PropsWithChildren } from "react";
+import { createContext, useContext, useEffect, type PropsWithChildren } from "react";
 import { MobileDeviceProvider, useMobileDevice } from "./Device";
 import { KeyboardDock, KeyboardProvider, useKeyboard } from "./Keyboard";
 import { PhoneFrame } from "./PhoneFrame";
 import { HomeIndicator, StatusBar } from "./components";
 
-export function MobileRuntime({ children }: PropsWithChildren) {
+export type MobileRuntimeMode = "device" | "fullscreen";
+
+const MobileRuntimeModeContext = createContext<MobileRuntimeMode>("device");
+
+export function useMobileRuntimeMode() {
+  return useContext(MobileRuntimeModeContext);
+}
+
+export function MobileRuntime({
+  children,
+  mode = "device",
+}: PropsWithChildren<{ mode?: MobileRuntimeMode }>) {
   return (
-    <MobileDeviceProvider>
-      <PhoneFrame>
-        <KeyboardProvider>
-          <KeyboardPreview />
-          <StatusBar />
-          <MobileAppViewport>{children}</MobileAppViewport>
-          <HomeIndicator />
-          <KeyboardDock />
-        </KeyboardProvider>
-      </PhoneFrame>
-    </MobileDeviceProvider>
+    <MobileRuntimeModeContext.Provider value={mode}>
+      <MobileDeviceProvider>
+        <PhoneFrame mode={mode}>
+          <KeyboardProvider>
+            <KeyboardPreview />
+            {mode === "device" ? <StatusBar /> : null}
+            <MobileAppViewport>{children}</MobileAppViewport>
+            {mode === "device" ? <HomeIndicator /> : null}
+            {mode === "device" ? <KeyboardDock /> : null}
+          </KeyboardProvider>
+        </PhoneFrame>
+      </MobileDeviceProvider>
+    </MobileRuntimeModeContext.Provider>
   );
 }
 

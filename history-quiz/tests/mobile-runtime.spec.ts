@@ -240,3 +240,22 @@ test("FlowStack pushes and pops screens while dismissing the keyboard", async ({
   await page.getByRole("button", { name: "Done" }).click();
   await expect(page.getByRole("heading", { name: "Flow root" })).toBeVisible();
 });
+
+test("fullscreen mode fills the viewport without device preview chrome", async ({ page }) => {
+  await page.goto("/tests/runtime-fixture.html?fixture=fullscreen");
+
+  await expect(page.getByTestId("web-stage")).toBeVisible();
+  await expect(page.getByTestId("phone-frame")).toHaveCount(0);
+  await expect(page.getByTestId("device-picker")).toHaveCount(0);
+  await expect(page.locator(".status-bar")).toHaveCount(0);
+  await expect(page.getByTestId("home-indicator")).toHaveCount(0);
+  await expect(page.getByTestId("android-navigation-bar")).toHaveCount(0);
+
+  const layout = await page.getByTestId("web-stage").evaluate((element) => {
+    const rect = element.getBoundingClientRect();
+    return { width: rect.width, height: rect.height, viewportWidth: window.innerWidth, viewportHeight: window.innerHeight };
+  });
+
+  expect(layout.width).toBe(layout.viewportWidth);
+  expect(layout.height).toBe(layout.viewportHeight);
+});
