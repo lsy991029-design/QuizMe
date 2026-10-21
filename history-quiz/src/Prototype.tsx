@@ -8,6 +8,7 @@ import { buildReport } from './report';
 import { portraitUrl } from './portraits';
 import { createAnonymousSession, QuotaApiError, submitTest, type QuotaSnapshot } from './quota';
 import { assetUrl } from './assets';
+import { grantAccess, hasAccessGrant, isAccessCode } from './access';
 
 type QuizState = {
   draft: Draft; updateDraft: (draft: Draft) => void; result: QuizResult | null;
@@ -29,6 +30,7 @@ const resultScreen: FlowScreen = { id: 'result', header: () => <InnerHeader />, 
 const shareScreen: FlowScreen = { id: 'share', header: flow => <InnerHeader onBack={flow.pop} backLabel="返回结果" />, headerHeight: 64, render: flow => <Share flow={flow} /> };
 const sharedScreen: FlowScreen = { id: 'shared', header: () => <InnerHeader />, headerHeight: 64, footer: flow => <VisitorFooter flow={flow} />, footerHeight: 132, render: () => <SharedResult /> };
 const unavailableScreen: FlowScreen = { id: 'unavailable', header: () => <InnerHeader />, headerHeight: 64, render: flow => <Unavailable flow={flow} /> };
+const accessScreen = (next: FlowScreen): FlowScreen => ({ id: 'access', render: flow => <AccessGate flow={flow} next={next} /> });
 
 function Brand() { return <span className="brand">{PRODUCT_NAME}<span className="brand-dot" aria-hidden="true" /></span>; }
 function Primary({ children, onClick, disabled = false, busy = false, className = '' }: { children: ReactNode; onClick: () => void; disabled?: boolean; busy?: boolean; className?: string }) {
@@ -44,6 +46,39 @@ function StorageNotice({ omitFullStops = false }: { omitFullStops?: boolean }) {
 function Toast({ message }: { message: string }) { return message ? <div className="toast" role="status">{message}</div> : null; }
 function InnerHeader({ onBack, backLabel = '返回' }: { onBack?: () => void; backLabel?: string }) {
   return <div className="inner-header">{onBack ? <button type="button" className="back" onClick={onBack}><ChevronLeftIcon />{backLabel}</button> : <span />}<Brand /><span /></div>;
+}
+function AccessGate({ flow, next }: { flow: FlowControls; next: FlowScreen }) {
+  const [code, setCode] = useState('');
+  const [error, setError] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => { inputRef.current?.focus(); }, []);
+  const unlock = () => {
+    if (code.length !== 6) {
+      setError('请输入 6 位数字令牌。');
+      inputRef.current?.focus();
+      return;
+    }
+    if (!isAccessCode(code)) {
+      setError('令牌无效，请检查后重试。');
+      setCode('');
+      inputRef.current?.focus();
+      return;
+    }
+    grantAccess();
+    flow.replace(next);
+  };
+  return <Page id="access" className="access-page">
+    <section className="access-card" aria-labelledby="access-title">
+      <div className="access-lock" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="10" width="16" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /><path d="M12 14v3" /></svg></div>
+      <p className="access-kicker">QUIZME · PRIVATE ACCESS</p>
+      <h1 id="access-title">访问验证</h1>
+      <p className="access-description">这是一次私密的人格测试，请输入 6 位访问令牌后继续。</p>
+      <label className="sr-only" htmlFor="access-code">6 位访问令牌</label>
+      <input ref={inputRef} id="access-code" className="access-code" type="password" inputMode="numeric" pattern="[0-9]*" autoComplete="one-time-code" maxLength={6} value={code} onChange={event => { setCode(event.target.value.replace(/\D/g, '').slice(0, 6)); setError(''); }} onKeyDown={event => { if (event.key === 'Enter') unlock(); }} aria-invalid={Boolean(error)} aria-describedby={error ? 'access-error' : 'access-help'} placeholder="请输入 6 位数字" />
+      {error ? <p id="access-error" className="access-error" role="alert">{error}</p> : <p id="access-help" className="access-help">令牌仅用于开启测试，不会提交个人信息。</p>}
+      <Primary onClick={unlock} disabled={code.length !== 6}>立即解锁<ArrowRightIcon /></Primary>
+    </section>
+  </Page>;
 }
 function InfoSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
   return <BottomSheet open={open} onOpenChange={value => { if (!value) onClose(); }} title="关于这场相遇" description="24 道选择，100 位中国历史人物" snap={0.69}><div className="info-body">
@@ -177,10 +212,10 @@ function SharedResult() {
 }
 function VisitorFooter({ flow }: { flow: FlowControls }) {
   const quiz = useQuiz();
-  return <div className="app-footer visitor-footer"><Primary onClick={() => { quiz.startNew(); clearShareHash(); flow.replace(quizScreen); }}>开始测试<ArrowRightIcon /></Primary><p className="footer-hint">24 道情境选择，遇见你的同频人物</p></div>;
+  return <div className="app-footer visitor-footer"><Primary onClick={() => { quiz.startNew(); clearShareHash(); flow.replace(accessScreen(quizScreen)); }}>开始测试<ArrowRightIcon /></Primary><p className="footer-hint">24 道情境选择，遇见你的同频人物</p></div>;
 }
 function Unavailable({ flow }: { flow: FlowControls }) {
-  return <Page id="unavailable" className="unavailable-page"><p className="eyebrow">这次相遇，暂未抵达</p><h1>这份结果<br />暂时无法查看</h1><p>链接可能不完整，或对应的内容版本已不可用。你仍可以开启自己的测试。</p><Primary onClick={() => { clearShareHash(); flow.replace(homeScreen); }}>开始我的测试<ArrowRightIcon /></Primary></Page>;
+  return <Page id="unavailable" className="unavailable-page"><p className="eyebrow">这次相遇，暂未抵达</p><h1>这份结果<br />暂时无法查看</h1><p>链接可能不完整，或对应的内容版本已不可用。你仍可以开启自己的测试。</p><Primary onClick={() => { clearShareHash(); flow.replace(hasAccessGrant() ? homeScreen : accessScreen(homeScreen)); }}>开始我的测试<ArrowRightIcon /></Primary></Page>;
 }
 function Share({ flow }: { flow: FlowControls }) {
   const { result } = useQuiz();
@@ -356,5 +391,8 @@ export default function Prototype() {
     screen?.addEventListener('scroll', keepViewport, { passive: true });
     return () => { window.removeEventListener('hashchange', onExternalNavigation); window.removeEventListener('popstate', onExternalNavigation); screen?.removeEventListener('scroll', keepViewport); };
   }, [cancelAdvance]);
-  return <QuizContext.Provider value={{ draft, updateDraft, result, saveResult, startNew: () => { cancelAdvance(); submitKeyRef.current = ''; submitSignatureRef.current = ''; updateDraft(freshDraft()); }, notice, shared: sharedRoute.result, quota, quotaLoading, quotaError, refreshQuota, showToast, pending, quizError, chooseAnswer, advance, cancelAdvance }}><div ref={appRef} className="history-app"><FlowStack key={externalHash} initial={sharedRoute.present ? sharedRoute.result ? sharedScreen : unavailableScreen : homeScreen} /><Toast message={toastMessage} /></div></QuizContext.Provider>;
+  const initialScreen = sharedRoute.present
+    ? sharedRoute.result ? sharedScreen : unavailableScreen
+    : hasAccessGrant() ? homeScreen : accessScreen(homeScreen);
+  return <QuizContext.Provider value={{ draft, updateDraft, result, saveResult, startNew: () => { cancelAdvance(); submitKeyRef.current = ''; submitSignatureRef.current = ''; updateDraft(freshDraft()); }, notice, shared: sharedRoute.result, quota, quotaLoading, quotaError, refreshQuota, showToast, pending, quizError, chooseAnswer, advance, cancelAdvance }}><div ref={appRef} className="history-app"><FlowStack key={externalHash} initial={initialScreen} /><Toast message={toastMessage} /></div></QuizContext.Provider>;
 }
