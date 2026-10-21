@@ -31,11 +31,23 @@ export async function createPoster(result: PublicResult, shareUrl: string): Prom
   text('跨越时代，遇见同频的自己', 706, 91, 22, colors.muted);
   line(130);
   text('我的历史人物匹配结果是', 80, 191, 27, colors.red);
+  const nameSize = person.name.length > 3 ? 82 : 96;
+  ctx.font = `700 ${nameSize}px ${serif}`;
+  let identityTop = 970 - ctx.measureText(person.name).actualBoundingBoxAscent;
+  if (result.matchPercent !== undefined) {
+    ctx.font = `700 88px ${sans}`;
+    identityTop = Math.min(identityTop, 956 - ctx.measureText(`${result.matchPercent}%`).actualBoundingBoxAscent);
+  }
+  // Keep a clear gap above the actual glyphs in both identity columns.
+  const portraitTop = 207;
+  const portraitRatio = portrait.naturalWidth / portrait.naturalHeight;
+  const portraitWidth = Math.min(920, (identityTop - 32 - portraitTop) * portraitRatio);
+  const portraitHeight = portraitWidth / portraitRatio;
   ctx.save();
   ctx.globalCompositeOperation = 'multiply';
-  ctx.drawImage(portrait, 80, 207, 920, 690);
+  ctx.drawImage(portrait, (canvas.width - portraitWidth) / 2, portraitTop, portraitWidth, portraitHeight);
   ctx.restore();
-  text(person.name, 80, 970, person.name.length > 3 ? 82 : 96, colors.ink, serif, '700');
+  text(person.name, 80, 970, nameSize, colors.ink, serif, '700');
   if (result.matchPercent !== undefined) {
     ctx.textAlign = 'right';
     text(`${result.matchPercent}%`, 1000, 956, 88, colors.red, sans, '700');
