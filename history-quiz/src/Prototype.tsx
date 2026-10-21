@@ -25,7 +25,7 @@ type QuizState = {
 const QuizContext = createContext<QuizState>(null!);
 const useQuiz = () => useContext(QuizContext);
 const homeScreen: FlowScreen = { id: 'home', render: flow => <Home flow={flow} /> };
-const quizScreen: FlowScreen = { id: 'quiz', header: () => <QuizHeader />, headerHeight: 72, footer: flow => <QuizFooter flow={flow} />, footerHeight: 136, render: () => <Quiz /> };
+const quizScreen: FlowScreen = { id: 'quiz', render: () => <Quiz /> };
 const resultScreen: FlowScreen = { id: 'result', header: () => <InnerHeader />, headerHeight: 64, render: () => <Result /> };
 const shareScreen: FlowScreen = { id: 'share', header: flow => <InnerHeader onBack={flow.pop} backLabel="返回结果" />, headerHeight: 64, render: flow => <Share flow={flow} /> };
 const sharedScreen: FlowScreen = { id: 'shared', header: () => <InnerHeader />, headerHeight: 64, footer: flow => <VisitorFooter flow={flow} />, footerHeight: 132, render: () => <SharedResult /> };
@@ -153,7 +153,11 @@ function Quiz() {
   const { draft } = quiz;
   const q = questions[draft.index];
   const heading = useRef<HTMLHeadingElement>(null);
-  useEffect(() => { heading.current?.focus({ preventScroll: true }); }, [draft.index]);
+  const documentRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    documentRef.current?.scrollTo(0, 0);
+    heading.current?.focus({ preventScroll: true });
+  }, [draft.index]);
   useEffect(() => quiz.cancelAdvance, [quiz.cancelAdvance]);
   const onArrow = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
     if (!['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
@@ -164,7 +168,29 @@ function Quiz() {
     buttons?.[next].focus();
   };
   const selected = draft.answers[draft.index];
-  return <Page id="quiz" className="quiz-page" pageKey={q.id}><StorageNotice omitFullStops /><section className="question"><h1 ref={heading} tabIndex={-1} id="question-title">{withoutFullStops(q.title)}</h1><p className="question-hint">选择更接近日常习惯的一项</p></section><div className="answers" role="radiogroup" aria-labelledby="question-title">{q.options.map((option, i) => <button key={option.id} type="button" className={`answer ${selected === option.id ? 'is-selected' : ''}`} role="radio" aria-checked={selected === option.id} disabled={quiz.pending} tabIndex={selected === option.id || (!selected && i === 0) ? 0 : -1} onKeyDown={event => onArrow(event, i)} onClick={() => quiz.chooseAnswer(option.id, flow)}><span className="answer-letter" aria-hidden="true">{option.id}</span><span className="answer-text">{withoutFullStops(option.text)}</span><span className="answer-check" aria-hidden="true">{selected === option.id ? <CheckIcon /> : null}</span></button>)}</div></Page>;
+  const active = flow.current.id === 'quiz';
+  return (
+    <div ref={documentRef} className="quiz-document" aria-hidden={!active} inert={!active}>
+      <main className="history-page quiz-page">
+        <QuizHeader />
+        <StorageNotice omitFullStops />
+        <section className="question">
+          <h1 ref={heading} tabIndex={-1} id="question-title">{withoutFullStops(q.title)}</h1>
+          <p className="question-hint">选择更接近日常习惯的一项</p>
+        </section>
+        <div className="answers" role="radiogroup" aria-labelledby="question-title">
+          {q.options.map((option, i) => (
+            <button key={option.id} type="button" className={`answer ${selected === option.id ? 'is-selected' : ''}`} role="radio" aria-checked={selected === option.id} disabled={quiz.pending} tabIndex={selected === option.id || (!selected && i === 0) ? 0 : -1} onKeyDown={event => onArrow(event, i)} onClick={() => quiz.chooseAnswer(option.id, flow)}>
+              <span className="answer-letter" aria-hidden="true">{option.id}</span>
+              <span className="answer-text">{withoutFullStops(option.text)}</span>
+              <span className="answer-check" aria-hidden="true">{selected === option.id ? <CheckIcon /> : null}</span>
+            </button>
+          ))}
+        </div>
+        <QuizFooter flow={flow} />
+      </main>
+    </div>
+  );
 }
 function QuizFooter({ flow }: { flow: FlowControls }) {
   const quiz = useQuiz();

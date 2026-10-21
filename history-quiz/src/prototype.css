@@ -858,3 +858,39 @@
     font-size: clamp(52px, 5vw, 68px);
   }
 }
+
+/* Quiz content and navigation share one native document flow. */
+.quiz-document {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+}
+
+.quiz-document .quiz-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-top: max(20px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(24px, env(safe-area-inset-bottom, 0px));
+}
+
+.quiz-document .quiz-header {
+  flex: 0 0 auto;
+  height: auto;
+  padding: 0 0 clamp(28px, 5vw, 40px);
+}
+
+.quiz-document .answers {
+  flex: 0 0 auto;
+}
+
+.quiz-document .quiz-footer {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  padding: clamp(28px, 5vw, 40px) 0 0;
+  border-top: 0;
+}
