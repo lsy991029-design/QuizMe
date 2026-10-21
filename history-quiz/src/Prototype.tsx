@@ -26,9 +26,9 @@ const QuizContext = createContext<QuizState>(null!);
 const useQuiz = () => useContext(QuizContext);
 const homeScreen: FlowScreen = { id: 'home', render: flow => <Home flow={flow} /> };
 const quizScreen: FlowScreen = { id: 'quiz', render: () => <Quiz /> };
-const resultScreen: FlowScreen = { id: 'result', header: () => <InnerHeader />, headerHeight: 64, render: () => <Result /> };
-const shareScreen: FlowScreen = { id: 'share', header: flow => <InnerHeader onBack={flow.pop} backLabel="返回结果" />, headerHeight: 64, render: flow => <Share flow={flow} /> };
-const sharedScreen: FlowScreen = { id: 'shared', header: () => <InnerHeader />, headerHeight: 64, footer: flow => <VisitorFooter flow={flow} />, footerHeight: 132, render: () => <SharedResult /> };
+const resultScreen: FlowScreen = { id: 'result', render: () => <Result /> };
+const shareScreen: FlowScreen = { id: 'share', header: flow => <InnerHeader onBack={flow.pop} backLabel="返回结果" />, headerHeight: 56, render: flow => <Share flow={flow} /> };
+const sharedScreen: FlowScreen = { id: 'shared', footer: flow => <VisitorFooter flow={flow} />, footerHeight: 132, render: () => <SharedResult /> };
 const unavailableScreen: FlowScreen = { id: 'unavailable', header: () => <InnerHeader />, headerHeight: 64, render: flow => <Unavailable flow={flow} /> };
 const accessScreen = (next: FlowScreen): FlowScreen => ({ id: 'access', render: flow => <AccessGate flow={flow} next={next} /> });
 
@@ -36,10 +36,13 @@ function Brand() { return <span className="brand">{PRODUCT_NAME}<span className=
 function Primary({ children, onClick, disabled = false, busy = false, className = '' }: { children: ReactNode; onClick: () => void; disabled?: boolean; busy?: boolean; className?: string }) {
   return <button type="button" className={`primary ${className}`} onClick={onClick} disabled={disabled || busy} aria-busy={busy}>{children}</button>;
 }
-function Page({ children, id, className = '', pageKey }: { children: ReactNode; id: string; className?: string; pageKey?: string }) {
+function Page({ children, id, className = '', pageKey, nativeScroll = false }: { children: ReactNode; id: string; className?: string; pageKey?: string; nativeScroll?: boolean }) {
   const flow = useFlow();
   const active = flow.current.id === id;
-  return <MobileScroll key={pageKey} className="history-scroll"><main className={`history-page ${className}`} aria-hidden={!active} inert={!active}>{children}</main></MobileScroll>;
+  const content = <main className={`history-page ${className}`} aria-hidden={!active} inert={!active}>{children}</main>;
+  return nativeScroll
+    ? <div key={pageKey} className="document-scroll history-scroll">{content}</div>
+    : <MobileScroll key={pageKey} className="history-scroll">{content}</MobileScroll>;
 }
 const withoutFullStops = (text: string) => text.replaceAll('。', '');
 function StorageNotice({ omitFullStops = false }: { omitFullStops?: boolean }) { const { notice } = useQuiz(); return notice ? <p className="storage-notice" role="status">{omitFullStops ? withoutFullStops(notice) : notice}</p> : null; }
@@ -226,7 +229,7 @@ function ResultBody({ result, shared = false }: { result: PublicResult; shared?:
 function Result() {
   const { result } = useQuiz();
   const flow = useFlow();
-  return <Page id="result" className="result-page">{result ? <><ResultBody result={result} /><ResultFooter flow={flow} /></> : <div className="empty-state"><h1>还没有可用的结果</h1><p>请从首页完成测试，再来查看你的同频人物。</p></div>}</Page>;
+  return <Page id="result" className="result-page" nativeScroll>{result ? <><ResultBody result={result} /><ResultFooter flow={flow} /></> : <div className="empty-state"><h1>还没有可用的结果</h1><p>请从首页完成测试，再来查看你的同频人物。</p></div>}</Page>;
 }
 function ResultFooter({ flow }: { flow: FlowControls }) {
   const quiz = useQuiz();
@@ -234,7 +237,7 @@ function ResultFooter({ flow }: { flow: FlowControls }) {
 }
 function SharedResult() {
   const { shared } = useQuiz();
-  return <Page id="shared" className="result-page shared-page">{shared ? <><p className="visitor-label">这是一份分享结果</p><ResultBody result={shared} shared /></> : null}</Page>;
+  return <Page id="shared" className="result-page shared-page" nativeScroll>{shared ? <><p className="visitor-label">这是一份分享结果</p><ResultBody result={shared} shared /></> : null}</Page>;
 }
 function VisitorFooter({ flow }: { flow: FlowControls }) {
   const quiz = useQuiz();
@@ -268,7 +271,7 @@ function Share({ flow }: { flow: FlowControls }) {
     return () => { alive = false; if (urlRef.current) { URL.revokeObjectURL(urlRef.current); urlRef.current = ''; } };
   }, [result?.id, shareUrl, retry]);
   useEffect(() => { if (!message) return; const timer = setTimeout(() => setMessage(''), 3200); return () => clearTimeout(timer); }, [message]);
-  if (!person || !result) return <Page id="share"><div className="empty-state"><h1>请先完成测试</h1><Primary onClick={() => flow.replace(homeScreen)}>返回开始页<ArrowRightIcon /></Primary></div></Page>;
+  if (!person || !result) return <Page id="share" className="share-page" nativeScroll><div className="empty-state"><h1>请先完成测试</h1><Primary onClick={() => flow.replace(homeScreen)}>返回开始页<ArrowRightIcon /></Primary></div></Page>;
   const save = async () => {
     if (!blobRef.current || busy) return;
     setBusy(true);
@@ -297,7 +300,7 @@ function Share({ flow }: { flow: FlowControls }) {
     } catch { setFallback(true); }
     finally { clearTimeout(timeout); }
   };
-  return <><Page id="share" className="share-page"><div className="share-intro"><h1>我的人物卡</h1><p>一张卡片，记录这次跨越时代的相遇。</p></div><figure className="poster-figure">{imageUrl ? <img className="poster-image" src={imageUrl} alt={`我的历史人物匹配结果：${person.name}，${person.typeTitle}。关键词：${person.tags.join('、')}。`} /> : <div className="poster-loading" role="status">{error ? <><span>{error}</span><button type="button" className="text-button" onClick={() => setRetry(value => value + 1)}>重新生成<ReloadIcon /></button></> : <><span className="loading-ring" /><span>正在生成人物卡</span></>}</div>}</figure><div className="share-actions"><Primary onClick={save} busy={busy} disabled={!imageUrl}>{busy ? '正在准备图片' : '保存图片'}<DownloadIcon /></Primary><button type="button" className="secondary" onClick={copy}>复制结果链接<Link2Icon /></button></div></Page><Toast message={message} /><BottomSheet open={fallback} onOpenChange={setFallback} title="保存图片与复制链接" description="可长按下方图片保存，或选中完整链接手动复制。" snap={0.82}><div className="save-fallback">{imageUrl ? <img src={imageUrl} alt={`${person.name}人物卡，支持长按保存`} /> : <p>图片尚未生成，请返回页面重试。</p>}<a href={shareUrl} target="_blank" rel="noopener noreferrer">{shareUrl}</a><button type="button" className="secondary" onClick={() => setFallback(false)}>返回人物卡<Cross2Icon /></button></div></BottomSheet></>;
+  return <><Page id="share" className="share-page" nativeScroll><div className="share-intro"><h1>我的人物卡</h1><p>一张卡片，记录这次跨越时代的相遇。</p></div><figure className="poster-figure">{imageUrl ? <img className="poster-image" src={imageUrl} alt={`我的历史人物匹配结果：${person.name}，${person.typeTitle}。关键词：${person.tags.join('、')}。`} /> : <div className="poster-loading" role="status">{error ? <><span>{error}</span><button type="button" className="text-button" onClick={() => setRetry(value => value + 1)}>重新生成<ReloadIcon /></button></> : <><span className="loading-ring" /><span>正在生成人物卡</span></>}</div>}</figure><div className="share-actions"><Primary onClick={save} busy={busy} disabled={!imageUrl}>{busy ? '正在准备图片' : '保存图片'}<DownloadIcon /></Primary><button type="button" className="secondary" onClick={copy}>复制结果链接<Link2Icon /></button></div></Page><Toast message={message} /><BottomSheet open={fallback} onOpenChange={setFallback} title="保存图片与复制链接" description="可长按下方图片保存，或选中完整链接手动复制。" snap={0.82}><div className="save-fallback">{imageUrl ? <img src={imageUrl} alt={`${person.name}人物卡，支持长按保存`} /> : <p>图片尚未生成，请返回页面重试。</p>}<a href={shareUrl} target="_blank" rel="noopener noreferrer">{shareUrl}</a><button type="button" className="secondary" onClick={() => setFallback(false)}>返回人物卡<Cross2Icon /></button></div></BottomSheet></>;
 }
 
 export default function Prototype() {

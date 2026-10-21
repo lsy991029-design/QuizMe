@@ -894,3 +894,57 @@
   padding: clamp(28px, 5vw, 40px) 0 0;
   border-top: 0;
 }
+
+/* Reports and sharing use browser scrolling without simulated drag physics. */
+.document-scroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+}
+
+.web-stage .document-scroll {
+  --mobile-safe-area-height: env(safe-area-inset-bottom, 0px);
+}
+
+.document-scroll .result-page {
+  padding-top: max(16px, env(safe-area-inset-top, 0px));
+}
+
+/* Fullscreen pages reserve the real browser safe area, not a phone preset. */
+.web-stage .history-app:has(.flow-screen[data-flow-current='true'] .share-page) > .flow-stack {
+  --flow-header-safe-area: env(safe-area-inset-top, 0px) !important;
+  --flow-header-height: calc(var(--flow-header-content-height) + env(safe-area-inset-top, 0px)) !important;
+}
+
+.web-stage .history-app:has(.flow-screen[data-flow-current='true'] .shared-page) .flow-fixed-footer {
+  bottom: 0;
+}
+
+.web-stage .visitor-footer {
+  --footer-safe: env(safe-area-inset-bottom, 0px);
+}
+
+.history-app:has(.flow-screen[data-flow-current='true'] .share-page) .flow-fixed-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.share-page .share-intro {
+  padding-top: 4px;
+}
+
+.history-app:has(.flow-screen[data-flow-current='true'] .share-page) .inner-header {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 32px);
+  gap: 8px;
+}
+
+@media (max-width: 359px) {
+  .history-app:has(.flow-screen[data-flow-current='true'] .share-page) .inner-header .brand {
+    font-size: 16px;
+  }
+}
