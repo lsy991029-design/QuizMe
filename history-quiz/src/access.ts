@@ -25,3 +25,21 @@ export function grantAccess(): void {
 export function isAccessCode(value: string): boolean {
   return value === ACCESS_CODE;
 }
+
+export function isSharedEntry(url = new URL(window.location.href)): boolean {
+  return url.searchParams.get('entry') === 'share' || url.hash.startsWith('#share=');
+}
+
+export function makeTestEntryUrl(base = window.location.href): string {
+  const url = new URL(base);
+  url.search = '?entry=share';
+  url.hash = '';
+  return url.href;
+}
+
+export function clearSharedEntry(): void {
+  const url = new URL(window.location.href);
+  url.searchParams.delete('entry');
+  url.hash = '';
+  history.replaceState(null, '', url.pathname + url.search);
+}

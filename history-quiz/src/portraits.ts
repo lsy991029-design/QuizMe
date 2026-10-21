@@ -3,7 +3,9 @@ import { assetUrl } from './assets';
 
 const portraits = new Map<string, Promise<HTMLImageElement>>();
 const readyPortraits = new Map<string, HTMLImageElement>();
-const portraitAssetUrl = (person: Pick<Character, 'id'>) => assetUrl(`art/portraits/${person.id}.webp`);
+type PortraitSize = 'report' | 'poster';
+const portraitAssetUrl = (person: Pick<Character, 'id'>, size: PortraitSize = 'report') =>
+  assetUrl(`art/portraits/${size === 'report' ? 'report/' : ''}${person.id}.webp`);
 
 // Reuse the decoded local resource in reports and posters without another network request.
 export const portraitUrl = (person: Pick<Character, 'id'>) => {
@@ -11,8 +13,8 @@ export const portraitUrl = (person: Pick<Character, 'id'>) => {
   return readyPortraits.get(url)?.src ?? url;
 };
 
-export function loadPortrait(person: Character): Promise<HTMLImageElement> {
-  const url = portraitAssetUrl(person);
+export function loadPortrait(person: Character, size: PortraitSize = 'report'): Promise<HTMLImageElement> {
+  const url = portraitAssetUrl(person, size);
   const cached = portraits.get(url);
   if (cached) return cached;
   const loading = new Promise<HTMLImageElement>((resolve, reject) => {
