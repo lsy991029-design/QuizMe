@@ -5,8 +5,8 @@ import { dimensions, findCharacter, PRODUCT_NAME, questions, type Answer, type C
 import { clearShareHash, DRAFT_KEY, freshDraft, loadSession, makeShareUrl, readSharedResult, RESULT_KEY, type Draft } from './session';
 import { createPoster } from './poster';
 import { buildReport } from './report';
-import { portraitUrl } from './portraits';
-import { createAnonymousSession, QuotaApiError, submitTest, type QuotaSnapshot } from './quota';
+import { loadPortrait, portraitUrl } from './portraits';
+import { createAnonymousSession, QuotaApiError, submitTest, type QuotaSnapshot, type SubmitTestResponse } from './quota';
 import { assetUrl } from './assets';
 import { grantAccess, hasAccessGrant, isAccessCode } from './access';
 
@@ -17,7 +17,7 @@ type QuizState = {
   quota: QuotaSnapshot | null; quotaLoading: boolean; quotaError: string;
   refreshQuota: () => Promise<QuotaSnapshot | null>;
   showToast: (message: string) => void;
-  pending: boolean; quizError: string;
+  pending: boolean; quizError: string; preparingResult: boolean;
   chooseAnswer: (answer: Answer, flow: FlowControls, autoAdvance?: boolean) => void;
   advance: (draft: Draft, flow: FlowControls) => Promise<void>;
   cancelAdvance: () => void;
@@ -173,8 +173,9 @@ function Quiz() {
   const selected = draft.answers[draft.index];
   const active = flow.current.id === 'quiz';
   return (
+    <>
     <div ref={documentRef} className="quiz-document" aria-hidden={!active} inert={!active}>
-      <main className="history-page quiz-page">
+      <main className="history-page quiz-page" aria-hidden={quiz.preparingResult} inert={quiz.preparingResult}>
         <QuizHeader />
         <StorageNotice omitFullStops />
         <section className="question">
@@ -193,6 +194,8 @@ function Quiz() {
         <QuizFooter flow={flow} />
       </main>
     </div>
+    {quiz.preparingResult && active ? <div className="result-preparing" role="status" aria-live="polite"><span className="loading-ring" aria-hidden="true" /><h1>正在生成测试结果</h1><p>正在准备人物画像与完整报告，请稍候</p></div> : null}
+    </>
   );
 }
 function QuizFooter({ flow }: { flow: FlowControls }) {
@@ -213,7 +216,7 @@ function ResultBody({ result, shared = false }: { result: PublicResult; shared?:
   const { person, main } = report;
   return <div className="report-body">
     <section className="report-card report-hero"><p className="report-kicker">{shared ? '朋友的历史人物匹配结果' : '你的历史人物匹配结果'}</p>
-      <img className="report-portrait" src={portraitUrl(person)} alt={`${person.name}水墨人物画像`} width={1024} height={768} draggable={false} />
+      <img className="report-portrait" src={portraitUrl(person)} alt={`${person.name}水墨人物画像`} width={1024} height={768} fetchPriority="high" draggable={false} />
       <div className="report-identity"><h1>{person.name}</h1>{report.match !== undefined ? <div className="report-match"><strong>{report.match}<span>%</span></strong><span>同频指数</span></div> : null}</div>
       <p className="report-person-meta">{person.era} · {person.field} · {person.typeTitle}</p><Traits person={person} />
       <span className="report-main-trait">主导倾向：{main.reading.label}</span><div className="report-heart"><h2>人物心声</h2><p>“{main.reading.voice}”</p></div>
@@ -309,6 +312,7 @@ export default function Prototype() {
   const [result, setResult] = useState(initial.result);
   const [notice, setNotice] = useState(initial.notice);
   const [pending, setPending] = useState(false);
+  const [preparingResult, setPreparingResult] = useState(false);
   const [quizError, setQuizError] = useState('');
   const [quota, setQuota] = useState<QuotaSnapshot | null>(null);
   const [quotaLoading, setQuotaLoading] = useState(true);
@@ -318,6 +322,8 @@ export default function Prototype() {
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const submitKeyRef = useRef('');
   const submitSignatureRef = useRef('');
+  const submissionRef = useRef<{ signature: string; response: SubmitTestResponse } | null>(null);
+  const submittingRef = useRef(false);
   const cancelAdvance = useCallback(() => {
     if (advanceTimer.current !== null) clearTimeout(advanceTimer.current);
     advanceTimer.current = null;
@@ -364,6 +370,7 @@ export default function Prototype() {
   }, []);
   useEffect(() => { void refreshQuota(); }, [refreshQuota]);
   const advance = async (next: Draft, flow: FlowControls) => {
+    if (submittingRef.current) return;
     cancelAdvance();
     if (!next.answers[next.index]) return;
     setQuizError('');
@@ -384,10 +391,21 @@ export default function Prototype() {
       submitKeyRef.current = crypto.randomUUID();
     }
     setPending(true);
+    submittingRef.current = true;
+    setPreparingResult(true);
     try {
-      const response = await submitTest({ idempotencyKey: submitKeyRef.current, answers });
-      saveResult(response.result);
+      const response = submissionRef.current?.signature === signature
+        ? submissionRef.current.response
+        : await submitTest({ idempotencyKey: submitKeyRef.current, answers });
+      submissionRef.current = { signature, response };
       setQuota(response.quota);
+      try {
+        await loadPortrait(findCharacter(response.result.personId)!);
+      } catch {
+        setQuizError('人物画像暂时无法加载，答案和结果已保留，请点击“查看结果”重试。');
+        return;
+      }
+      saveResult(response.result);
       updateDraft({ ...next, completed: true, updatedAt: Date.now() });
       flow.replace(resultScreen);
     } catch (reason) {
@@ -398,11 +416,13 @@ export default function Prototype() {
         setQuizError('结果暂时无法生成，答案已保留，请重试。');
       }
     } finally {
+      submittingRef.current = false;
+      setPreparingResult(false);
       setPending(false);
     }
   };
   const chooseAnswer = (answer: Answer, flow: FlowControls, autoAdvance = true) => {
-    if (advanceTimer.current !== null) return;
+    if (advanceTimer.current !== null || submittingRef.current) return;
     const answers = [...draft.answers];
     answers[draft.index] = answer;
     const next = { ...draft, answers, updatedAt: Date.now() };
@@ -423,5 +443,5 @@ export default function Prototype() {
   const initialScreen = sharedRoute.present
     ? sharedRoute.result ? sharedScreen : unavailableScreen
     : hasAccessGrant() ? homeScreen : accessScreen(homeScreen);
-  return <QuizContext.Provider value={{ draft, updateDraft, result, saveResult, startNew: () => { cancelAdvance(); submitKeyRef.current = ''; submitSignatureRef.current = ''; updateDraft(freshDraft()); }, notice, shared: sharedRoute.result, quota, quotaLoading, quotaError, refreshQuota, showToast, pending, quizError, chooseAnswer, advance, cancelAdvance }}><div ref={appRef} className="history-app"><FlowStack key={externalHash} initial={initialScreen} /><Toast message={toastMessage} /></div></QuizContext.Provider>;
+  return <QuizContext.Provider value={{ draft, updateDraft, result, saveResult, startNew: () => { cancelAdvance(); submitKeyRef.current = ''; submitSignatureRef.current = ''; submissionRef.current = null; updateDraft(freshDraft()); }, notice, shared: sharedRoute.result, quota, quotaLoading, quotaError, refreshQuota, showToast, pending, preparingResult, quizError, chooseAnswer, advance, cancelAdvance }}><div ref={appRef} className="history-app"><FlowStack key={externalHash} initial={initialScreen} /><Toast message={toastMessage} /></div></QuizContext.Provider>;
 }
