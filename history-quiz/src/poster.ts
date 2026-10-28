@@ -4,10 +4,12 @@ import { loadPortrait } from './portraits';
 
 const serif = '"Songti SC", "STSong", "Noto Serif SC", serif';
 const sans = '-apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif';
-export async function createPoster(result: PublicResult, shareUrl: string): Promise<Blob> {
+export async function createPoster(result: PublicResult, shareUrl: string, sourcePortrait?: HTMLImageElement): Promise<Blob> {
   const person = findCharacter(result.personId);
   if (!person) throw new Error('没有找到对应人物，请返回结果页重试。');
-  const [portrait] = await Promise.all([loadPortrait(person, 'poster'), document.fonts.ready]);
+  const portrait = sourcePortrait ?? await loadPortrait(person, 'poster');
+  // Poster typography uses installed system fonts. A pending unrelated web font
+  // must not prevent exporting a complete card.
   const canvas = document.createElement('canvas'); canvas.width = 1080; canvas.height = 1440;
   const ctx = canvas.getContext('2d');
   if (!ctx) throw new Error('当前浏览器不支持生成人物卡，请尝试其他浏览器。');

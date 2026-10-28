@@ -8,6 +8,7 @@ import { loadPortrait, portraitUrl } from './portraits';
 import { createAnonymousSession, QuotaApiError, submitTest, type QuotaSnapshot, type SubmitTestResponse } from './quota';
 import { assetUrl } from './assets';
 import { makeTestEntryUrl } from './access';
+import { getSharePoster, posterCacheKey } from './sharePoster';
 
 type QuizState = {
   draft: Draft; updateDraft: (draft: Draft) => void; result: QuizResult | null;
@@ -213,18 +214,33 @@ function Share({ flow }: { flow: FlowControls }) {
   const urlRef = useRef('');
   const person = result ? findCharacter(result.personId)! : null;
   const shareUrl = result ? makeTestEntryUrl() : '';
+  const cardKey = result ? posterCacheKey(result, shareUrl) : '';
   useEffect(() => {
     if (!result) return;
     let alive = true;
     blobRef.current = null; setImageUrl(''); setError('');
-    import('./poster').then(({ createPoster }) => createPoster(result, shareUrl)).then(blob => {
+    const display = (blob: Blob) => {
       if (!alive) return;
       blobRef.current = blob;
-      if (urlRef.current) URL.revokeObjectURL(urlRef.current);
-      urlRef.current = URL.createObjectURL(blob); setImageUrl(urlRef.current);
-    }).catch(reason => { if (alive) setError(reason instanceof Error ? reason.message : '人物卡生成失败，请重试。'); });
-    return () => { alive = false; if (urlRef.current) { URL.revokeObjectURL(urlRef.current); urlRef.current = ''; } };
-  }, [result?.id, shareUrl, retry]);
+      const previous = urlRef.current;
+      const next = URL.createObjectURL(blob);
+      urlRef.current = next; setImageUrl(next);
+      // Keep the previous URL alive until the replacement image can render.
+      if (previous) retiredUrls.push(previous);
+    };
+    const retiredUrls: string[] = [];
+    const job = getSharePoster(result, shareUrl);
+    if (job.best) display(job.best);
+    else void job.initial.then(display).catch(reason => {
+      if (alive) setError(reason instanceof Error ? reason.message : '人物卡生成失败，请重试。');
+    });
+    void job.upgraded.then(blob => { if (blob && blobRef.current !== blob) display(blob); });
+    return () => {
+      alive = false;
+      retiredUrls.forEach(url => URL.revokeObjectURL(url));
+      if (urlRef.current) { URL.revokeObjectURL(urlRef.current); urlRef.current = ''; }
+    };
+  }, [cardKey, retry]);
   useEffect(() => { if (!message) return; const timer = setTimeout(() => setMessage(''), 3200); return () => clearTimeout(timer); }, [message]);
   if (!person || !result) return <Page id="share" className="share-page" nativeScroll><div className="empty-state"><h1>请先完成测试</h1><Primary onClick={() => flow.replace(homeScreen)}>返回开始页<ArrowRightIcon /></Primary></div></Page>;
   const save = async () => {
